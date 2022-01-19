@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Владимир Картабаев](https://up.htmlacademy.ru/htmlcss/33/user/1952407).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий (sench) Железцов] (https://htmlacademy.ru/profile/sench).
 
 ---
 
