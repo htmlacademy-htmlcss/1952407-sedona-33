@@ -8,7 +8,7 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <a class="navigation-logo" href="index.html">
+        <a class="navigation-logo" href="index.html"> <!--ссылка на саму себя или убрать href вообще?-->
           <img class="page-header-logo" alt="Логотип сайта городка Седона»." src="">
         </a>
         <ul class="navigation-list">
@@ -31,7 +31,9 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
-              <span class="likes-number">12</span>
+              <span class="navigation-likes-number">
+                <sup>12</sup>
+              </span> <!--правильный ход мыслей как сделать лайки?-->
             </a>
           </li>
           <li class="navigation-item">
@@ -40,7 +42,17 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="main-page">
+      <h1 class="visually-hidden">Седона - городок в Аризоне</h1>
+      <div class="main-page-intro">
+        <img class="main-intro-logo" src="" alt="Welcome to the gorgeous Sedona. Because the Grand canyon sucks!">
+        <!--Нижний divider думаю пойдет псевдоклассом after у main-page-intro -->
+      </div>
+      <header class="main-page-header"> <!--Думал как лучше эту часть оформить, к описанию header говориться что - header используется для группировки навигации и вводного контента. Как раз вводный контент-->
+        <b class="main-page-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
+        <p class="main-page-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+      </header>
+    </main>
     <footer></footer>
   </body>
 </html>
