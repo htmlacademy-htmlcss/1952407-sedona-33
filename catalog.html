@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск гостиницы в Седоне</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="navigation">
+        <a class="navigation-logo" href="index.html">
+          <img class="page-header-logo" alt="Логотип сайта городка Седона»." src="">
+        </a>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a> <!--ссылка на саму себя или убрать href вообще?-->
+          </li>
+        </ul>
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="navigation-likes-number">
+                <sup>12</sup>
+              </span> <!--правильный ход мыслей как сделать лайки?-->
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link button" href="#">Хочу сюда!</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+
+
+
+
+
+
+    <main class="main-inner">
+      <header class="inner-header">
+        <h1 class="inner-header-title">Гостиницы Седоны</h1>
+      </header>
+      <section class="catalog-hotels">
+        <h2 class="visually-hidden">Фильтр выбора гостиниц</h2>
+        <form class="form-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="form-filter-group">
+            <legend class="form-filter-title">Инфраструктура:</legend>
+            <ul class="form-filter-list">
+              <li class="form-filter-item">
+               <input class="control-input" type="checkbox" name="pool" id="pool" checked>
+               <label class="control-label" for="pool">Бассейн</label>
+              </li>
+              <li class="form-filter-item">
+                <input class="control-input" type="checkbox" name="parking" id="parking" checked>
+                <label class="control-label" for="parking">Парковка</label>
+              </li>
+              <li class="form-filter-item">
+                <input class="control-input" type="checkbox" name="wifi" id="wifi">
+                <label class="control-label" for="wifi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form-filter-group">
+            <legend class="form-filter-title">Тип жилья:</legend>
+            <ul class="form-filter-list">
+              <li class="form-filter-item">
+               <input class="control-input" type="radio" name="housing-group" id="hotel" value="hotel" checked>
+               <label class="control-label" for="hotel">Гостиница</label>
+              </li>
+              <li class="form-filter-item">
+                <input class="control-input" type="radio" name="housing-group" id="motel" value="motel">
+                <label class="control-label" for="motel">Мотель</label>
+              </li>
+              <li class="form-filter-item">
+                <input class="control-input" type="radio" name="housing-group" id="apartment" value="apartment">
+                <label class="control-label" for="apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <!--Блок с стоимостью в лайве Андрей сказал, что Николай покажет на компонентах-->
+          <button class="button button-blue" type="submit">Применить</button>
+          <button class="button button-transparent" type="reset">Сбросить</button>
+        </form>
+      </section>
+      <div class="sorting-wrapper"> <!--Уместно ли тут использовать тег header? Похоже на навигацию по странице-->
+        <p class="sorting-result"><b>Найдено гостиниц: 38</b></p>
+        <select class="select-control" aria-label="Сортировка">
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="expensive">Сначала дорогое</option>
+          <option value="popular">Сначала популярное</option>
+        </select>
+        <a class="button-sorting" href="#">
+          <span class="visually-hidden">Показать список</span>
+        </a>
+        <a class="button-sorting" href="#">
+          <span class="visually-hidden">Показать по одному</span>
+        </a>
+        <a class="button-sorting" href="#">
+          <span class="visually-hidden">Показать карточки</span>
+        </a>
+      </div>
+      <section class="inner-content">
+        <h2 class="inner-content-title">Карточки гостиниц</h2>
+        <ul class="inner-content-list">
+          <li class="inner-content-card">
+            <a class="content-card-link" href="#">
+              <img class="content-card-img" src="" alt="">
+              <h3>Amara Resort & Spa</h3>
+            </a>
+            <p>Гостиница</p>
+            <p>От 4000 ₽</p>
+            <a class="button button-brown" href="#">подробнее</a>
+            <a class="button button-blue" href="#">В избранное</a>
+            <div class="hotel-stars stars-four"></div> <!--Нужно ли сделать письменное отображение сколько звезд с классом visually-hidden? -->
+            <p class="hotel-rating">Рейтинг: 8,5</p>
+          </li>
+          <li class="inner-content-card">
+            <a class="content-card-link" href="#">
+              <img class="content-card-img" src="" alt="">
+              <h3>Desert Quail Inn</h3>
+            </a>
+            <p>Гостиница</p>
+            <p>От 3000 ₽</p>
+            <a class="button button-brown" href="#">подробнее</a>
+            <a class="button button-blue" href="#">В избранное</a>
+            <div class="hotel-stars stars-three"></div>
+            <p class="hotel-rating">Рейтинг: 8,9</p>
+          </li>
+          <li class="inner-content-card">
+            <a class="content-card-link" href="#">
+              <img class="content-card-img" src="" alt="">
+              <h3>Villas at Poco Diablo</h3>
+            </a>
+            <p>Гостиница</p>
+            <p>От 2000 ₽</p>
+            <a class="button button-brown" href="#">подробнее</a>
+            <a class="button button-green" href="#">В избранном</a>
+            <div class="hotel-stars stars-two"></div>
+            <p class="hotel-rating">Рейтинг: 9,2</p>
+          </li>
+          <li class="inner-content-card">
+            <a class="content-card-link" href="#">
+              <img class="content-card-img" src="" alt="">
+              <h3>GreenTree Inn</h3>
+            </a>
+            <p>Гостиница</p>
+            <p>От 3000 ₽</p>
+            <a class="button button-brown" href="#">подробнее</a>
+            <a class="button button-blue" href="#">В избранное</a>
+            <div class="hotel-stars stars-two"></div>
+            <p class="hotel-rating">Рейтинг: 9,2</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <footer class="page-footer">
+      <section class="mailing mailing-no-bg-img">
+        <h2 class="visually-hidden">Поле подписки на рассылку</h2>
+        <b class="mailing-title">Подпишитесь на рассылку</b>
+        <p class="mailing-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="mailing-email">Email</label>
+          <input class="field" type="email" name="mailing-email" id="mailing-email" placeholder="Ваш e-mail">
+          <button class="mailing-button button button-blue" type="submit">
+            <span class="mailing-button-description">Подписаться</span>
+          </button>
+        </form>
+      </section>
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="footer-social">
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="footer-social-button" href="https://twitter.com/htmlacademy_ru" aria-label="Твиттер"> <!--Нужен ли aria-label если есть span с описанием visually-hidden?-->
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-button" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-button" href="https://www.youtube.com/c/HTMLAcademyRUS">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-phone">
+          <a href="tel:+78128121212">+7 (812) 812-12-12</a> <!--Нужен ли где то тег address?-->
+        </div>
+        <div class="footer-logo"> <!--Нужен ли тут див или без него. Или вообще по другому надо?-->
+          <a class="footer-logo-link" href="https://htmlacademy.ru/">
+            <img class="footer-logo-img" src="" alt="Логотип HTML Academy.">
+          </a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
+
