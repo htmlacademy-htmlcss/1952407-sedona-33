@@ -35,6 +35,22 @@ body {
   border-radius: 4px;
 }
 
+.button-blue {
+  background-color: #83B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
+}
+
+.button-transparent {
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: none;
+  background-color: transparent;
+  font-weight: 400;
+}
+
 /* Шапка */
 
 .page-header {
@@ -161,6 +177,11 @@ body {
   line-height: 26px;
 }
 
+.search-hotel .button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
 /* Подвал */
 /* Подписка на рассылку */
 
@@ -186,9 +207,15 @@ body {
   line-height: 26px;
 }
 
-.mailing-button {
-  background-color: #83B3D3;
+.mailing-form .button-blue {
   border-radius: 0px 10px 10px 0px;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.mailing-form .field {
+  background-color: #F2F2F2;
+  border-radius: 0px 10px 10px 0px; /*в фигме так, но подходит так *10px 0px 0px 10px; Кому верить? =)*/
 }
 
 /* Контакты */
@@ -199,7 +226,7 @@ body {
 }
 
 .footer-phone {
-  text-align: center;
+  text-align: center; /* скорее всего не тут, а в ".footer-phone a" */
 }
 
 .footer-phone a {
@@ -210,3 +237,90 @@ body {
 }
 
 /* catalog */
+/* main inner */
+
+.main-inner {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.catalog-hotels-wrapper {
+  background: #756257 url("../images/catalog/catalog-background-filter.jpg") no-repeat;
+  color: #ffffff;
+}
+
+.form-filter .button-blue {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/* Сортировка */
+
+.sorting-result {
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+
+/* Карточки гостиниц */
+
+.content-card-link {
+  color: #000000;
+  text-decoration-line: none;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+}
+
+.content-card-text,
+.content-card-price  {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.inner-content-card .button {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.hotel-rating {
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.button-more {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* Пагинация */
+
+.pagination .button {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.pagination-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.hotels-on-page-text {
+  line-height: 23px;
+  color: #333333
+}
+
+/* Подвал */
+
+.mailing-no-bg-img {
+  background-image: none;
+  background-color: #ffffff;
+  color: #000000;
+}
