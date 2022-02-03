@@ -38,34 +38,74 @@ body {
   text-decoration: none;
 }
 
-/* .navigation-link.button {
+.navigation-link.button {
   color: #ffffff;
   background-color: #756257;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
-  padding: 9px 15px;
-  border-radius: 4px;
-} */
-
-/* .navigation-likes-number sup {
-  font-size: 10px;
-  line-height: 13px;
-  background-color: #7DB54F;
-  border-radius: 10px;
-} */
-
-/* main */
-
-.main-page {
-  color: #333333;
-  background-color: #f2f2f2;
-  /* в демках показано что для main нужно прописывать это для безопасности, но те же самые свойста наследуются из body, не понял в чем смысл тогда это опять писать. */
+  /* padding: 9px 15px; */ /* как нормально измерить внутренний отступ у этого элемента? */
+  /* border-radius: 4px; */
 }
 
+.navigation-likes-number sup {
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  color: #ffffff;
+  /* padding: 4px;  */ /* как нормально измерить внутренний отступ у этого элемента? */
+}
+
+/* intro */
+
 .main-page-intro {
-  color: #333333;
-  background-color: #f2f2f2; /* В лайве Николай говорил что нужно к каждой большой фоновой картинке указывать для безопасности color и background-color. Опять же, в данном случае не понял для чего это, если наследуется из body и вообще тут нету текста*/
-  background: url("../images/index-background.jpg") no-repeat;
+  color: #f2f2f2;
+  background-color: #333333; /* Тут же нужен темный фон для контекстной картинки? И в данном случае зачем вообще он нужен? Тут же нет текста? только welcome логотип */
+  background-image: url("../images/index-background.jpg");
+  background-repeat: no-repeat;
   background-size: 100% auto;
+  text-align: center;
+  width: 1200px;
+  height: 485px;
+}
+
+.main-intro-logo {
+  padding-top: 51px;
+}
+
+/* Заголовок */
+
+.main-page-header {
+  text-align: center;
+}
+
+.main-page-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.main-page-text {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400; /* Нужно ли указывать когда 400? Как я понял он по умолчанию 400, но не понял почему. Я в body не писал это свойство что бы наследовалось */
+}
+
+/* Преимущества */
+
+.advantages-list {
+  text-align: center;
+}
+
+.advantages-list-white {
+  background-color: #83b3d3;
+  color: #ffffff;
+}
+
+.advantages-description-title {
+  font-size: 24px;
+  line-height: 28px;
 }
