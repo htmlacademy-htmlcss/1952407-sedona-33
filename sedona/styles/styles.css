@@ -20,6 +20,19 @@ body {
   line-height: 21px;
   color: #333333;
   background-color: #f2f2f2;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Тень всей страницы сюда добавляется? */
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #756257;
+  text-decoration: none;
+  /* padding: 9px 15px; */ /* как нормально измерить внутренний отступ у этого элемента? или это позже нам расскажут?*/
+  border-radius: 4px;
 }
 
 /* Шапка */
@@ -40,12 +53,8 @@ body {
 
 .navigation-link.button {
   color: #ffffff;
-  background-color: #756257;
-  text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
-  /* padding: 9px 15px; */ /* как нормально измерить внутренний отступ у этого элемента? */
-  /* border-radius: 4px; */
 }
 
 .navigation-likes-number sup {
@@ -55,20 +64,27 @@ body {
   background-color: #7DB54F;
   border-radius: 50%;
   color: #ffffff;
-  /* padding: 4px;  */ /* как нормально измерить внутренний отступ у этого элемента? */
+  /* padding: 4px;  */ /* как нормально измерить внутренний отступ у этого элемента?  или это позже нам расскажут?*/
+}
+
+/* main-page */
+
+.main-page {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* intro */
 
 .main-page-intro {
   color: #f2f2f2;
-  background-color: #333333; /* Тут же нужен темный фон для контекстной картинки? И в данном случае зачем вообще он нужен? Тут же нет текста? только welcome логотип */
+  background-color: #333333; /* Тут же нужен темный фон для контекстной картинки? И в данном случае зачем вообще он нужен? Тут же нет текста, только welcome логотип */
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   text-align: center;
   width: 1200px;
-  height: 485px;
+  height: 485px; /* width и height на данном этапе нужно указывать? */
 }
 
 .main-intro-logo {
@@ -108,4 +124,89 @@ body {
 .advantages-description-title {
   font-size: 24px;
   line-height: 28px;
+  text-transform: uppercase;
 }
+
+/* .advantages-description {
+  font-weight: 400;
+} */ /* Нужно ли это указывать? font-weight по умолчанию и так 400 */
+
+.advantages-list:nth-of-type(2) .advantages-item:nth-child(2n+1),
+.advantages-list:nth-of-type(4) .advantages-item:nth-child(2n+1) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-list:nth-of-type(2) .advantages-item:nth-child(2) {
+  background-color: #ffffff;
+}
+
+.advantages-list:nth-of-type(4) .advantages-item:nth-child(2) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Форма поиска гостиницы */
+
+.search-hotel {
+  text-align: center;
+}
+
+.search-hotel-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search-hotel-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/* Подвал */
+/* Подписка на рассылку */
+
+.mailing {
+  background-image: url("../images/background-mailing.jpg");
+  background-size: 100% auto;
+  /* width: 1200px; */
+  /* height: 411px; */
+  background-repeat: no-repeat;
+  color: #ffffff;
+  background-color: #333333;
+  text-align: center;
+}
+
+.mailing-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.mailing-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.mailing-button {
+  background-color: #83B3D3;
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* Контакты */
+
+.footer-contacts {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.footer-phone {
+  text-align: center;
+}
+
+.footer-phone a {
+ color: inherit;
+ font-size: 40px;
+  line-height: 40px;
+  text-decoration-line: none;
+}
+
+/* catalog */
