@@ -173,6 +173,7 @@ body {
 .search-hotel-description {
   font-size: 22px;
   line-height: 26px;
+  color: #333333;
 }
 
 .search-hotel .button {
@@ -214,6 +215,7 @@ body {
 .mailing-form .field {
   background-color: #F2F2F2;
   border-radius: 0px 10px 10px 0px;
+  color: #000000;
 }
 
 /* Контакты */
