@@ -20,7 +20,6 @@ body {
   line-height: 21px;
   color: #333333;
   background-color: #f2f2f2;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Тень всей страницы сюда добавляется? */
 }
 
 .button {
@@ -31,7 +30,6 @@ body {
   color: #ffffff;
   background-color: #756257;
   text-decoration: none;
-  /* padding: 9px 15px; */ /* как нормально измерить внутренний отступ у этого элемента? или это позже нам расскажут?*/
   border-radius: 4px;
 }
 
@@ -73,14 +71,13 @@ body {
   line-height: 20px;
 }
 
-.navigation-likes-number sup {
+.navigation-likes-number .likes-number {
   font-size: 10px;
   line-height: 13px;
   font-weight: 400;
   background-color: #7DB54F;
   border-radius: 50%;
   color: #ffffff;
-  /* padding: 4px;  */ /* как нормально измерить внутренний отступ у этого элемента?  или это позже нам расскажут?*/
 }
 
 /* main-page */
@@ -94,13 +91,13 @@ body {
 
 .main-page-intro {
   color: #f2f2f2;
-  background-color: #333333; /* Тут же нужен темный фон для контекстной картинки? И в данном случае зачем вообще он нужен? Тут же нет текста, только welcome логотип */
+  background-color: #333333;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   text-align: center;
   width: 1200px;
-  height: 485px; /* width и height на данном этапе нужно указывать? */
+  height: 485px;
 }
 
 .main-intro-logo {
@@ -123,7 +120,7 @@ body {
 .main-page-text {
   font-size: 22px;
   line-height: 36px;
-  font-weight: 400; /* Нужно ли указывать когда 400? Как я понял он по умолчанию 400, но не понял почему. Я в body не писал это свойство что бы наследовалось */
+  font-weight: 400;
 }
 
 /* Преимущества */
@@ -143,9 +140,9 @@ body {
   text-transform: uppercase;
 }
 
-/* .advantages-description {
+.advantages-description {
   font-weight: 400;
-} */ /* Нужно ли это указывать? font-weight по умолчанию и так 400 */
+}
 
 .advantages-list:nth-of-type(2) .advantages-item:nth-child(2n+1),
 .advantages-list:nth-of-type(4) .advantages-item:nth-child(2n+1) {
@@ -188,7 +185,7 @@ body {
 .mailing {
   background-image: url("../images/background-mailing.jpg");
   background-size: 100% auto;
-  /* width: 1200px; */
+  /* width: 1200px; оставил для себя, уберу в следующем дз на флексах*/
   /* height: 411px; */
   background-repeat: no-repeat;
   color: #ffffff;
@@ -215,7 +212,7 @@ body {
 
 .mailing-form .field {
   background-color: #F2F2F2;
-  border-radius: 0px 10px 10px 0px; /*в фигме так, но подходит так *10px 0px 0px 10px; Кому верить? =)*/
+  border-radius: 0px 10px 10px 0px;
 }
 
 /* Контакты */
@@ -226,7 +223,7 @@ body {
 }
 
 .footer-phone {
-  text-align: center; /* скорее всего не тут, а в ".footer-phone a" */
+  text-align: center; /* (для себя) скорее всего не тут, а в ".footer-phone a" */
 }
 
 .footer-phone a {
