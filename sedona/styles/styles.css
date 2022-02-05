@@ -142,6 +142,7 @@ body {
 
 .advantages-description {
   font-weight: 400;
+  color: #333333;
 }
 
 .advantages-list:nth-of-type(2) .advantages-item:nth-child(2n+1),
