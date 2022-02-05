@@ -246,6 +246,10 @@ body {
   color: #ffffff;
 }
 
+.breadcrumbs-link {
+  color: inherit;
+}
+
 .form-filter .button-blue {
   font-size: 16px;
   line-height: 21px;
