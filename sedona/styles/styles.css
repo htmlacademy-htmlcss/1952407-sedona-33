@@ -1,0 +1,330 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #756257;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.button-blue {
+  background-color: #83B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
+}
+
+.button-transparent {
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: none;
+  background-color: transparent;
+  font-weight: 400;
+}
+
+/* Шапка */
+
+.page-header {
+  background: #ffffff;
+  color: #000000;
+}
+
+.navigation-link {
+  color: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation-link.button {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.navigation-likes-number .likes-number {
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+/* main-page */
+
+.main-page {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* intro */
+
+.main-page-intro {
+  color: #f2f2f2;
+  background-color: #333333;
+  background-image: url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  width: 1200px;
+  height: 485px;
+}
+
+.main-intro-logo {
+  padding-top: 51px;
+}
+
+/* Заголовок */
+
+.main-page-header {
+  text-align: center;
+}
+
+.main-page-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.main-page-text {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+/* Преимущества */
+
+.advantages-list {
+  text-align: center;
+}
+
+.advantages-list-white {
+  background-color: #83b3d3;
+  color: #ffffff;
+}
+
+.advantages-description-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-description {
+  font-weight: 400;
+  color: #333333;
+}
+
+.advantages-list:nth-of-type(2) .advantages-item:nth-child(2n+1),
+.advantages-list:nth-of-type(4) .advantages-item:nth-child(2n+1) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-list:nth-of-type(2) .advantages-item:nth-child(2) {
+  background-color: #ffffff;
+}
+
+.advantages-list:nth-of-type(4) .advantages-item:nth-child(2) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Форма поиска гостиницы */
+
+.search-hotel {
+  text-align: center;
+}
+
+.search-hotel-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search-hotel-description {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.search-hotel .button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* Подвал */
+/* Подписка на рассылку */
+
+.mailing {
+  background-image: url("../images/background-mailing.jpg");
+  background-size: 100% auto;
+  /* width: 1200px; оставил для себя, уберу в следующем дз на флексах*/
+  /* height: 411px; */
+  background-repeat: no-repeat;
+  color: #ffffff;
+  background-color: #333333;
+  text-align: center;
+}
+
+.mailing-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.mailing-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.mailing-form .button-blue {
+  border-radius: 0px 10px 10px 0px;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.mailing-form .field {
+  background-color: #F2F2F2;
+  border-radius: 0px 10px 10px 0px;
+  color: #000000;
+}
+
+/* Контакты */
+
+.footer-contacts {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.footer-phone {
+  text-align: center; /* (для себя) скорее всего не тут, а в ".footer-phone a" */
+}
+
+.footer-phone a {
+ color: inherit;
+ font-size: 40px;
+  line-height: 40px;
+  text-decoration-line: none;
+}
+
+/* catalog */
+/* main inner */
+
+.main-inner {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.catalog-hotels-wrapper {
+  background: #756257 url("../images/catalog/catalog-background-filter.jpg") no-repeat;
+  color: #ffffff;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+}
+
+.form-filter .button-blue {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/* Сортировка */
+
+.sorting-result {
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+
+/* Карточки гостиниц */
+
+.content-card-link {
+  color: #000000;
+  text-decoration-line: none;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+}
+
+.content-card-text,
+.content-card-price  {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.inner-content-card .button {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.hotel-rating {
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.button-more {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* Пагинация */
+
+.pagination .button {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.pagination-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.hotels-on-page-text {
+  line-height: 23px;
+  color: #333333
+}
+
+/* Подвал */
+
+.mailing-no-bg-img {
+  background-image: none;
+  background-color: #ffffff;
+  color: #000000;
+}

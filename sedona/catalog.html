@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поиск гостиницы в Седоне</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -32,7 +33,7 @@
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="navigation-likes-number">
-                <sup>12</sup>
+                <sup class="likes-number">12</sup>
               </span>
             </a>
           </li>
@@ -43,63 +44,65 @@
       </nav>
     </header>
     <main class="main-inner">
-      <header class="inner-header">
-        <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
-              <span class="visually-hidden">Главная</span>
-            </a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Гостиницы</a>
-          </li>
-        </ul>
-      </header>
-      <section class="catalog-hotels">
-        <h2 class="visually-hidden">Фильтр выбора гостиниц</h2>
-        <form class="form-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="form-filter-group">
-            <legend class="form-filter-title">Инфраструктура:</legend>
-            <ul class="form-filter-list">
-              <li class="form-filter-item">
-               <input class="control-input" type="checkbox" name="pool" id="pool" checked>
-               <label class="control-label" for="pool">Бассейн</label>
-              </li>
-              <li class="form-filter-item">
-                <input class="control-input" type="checkbox" name="parking" id="parking" checked>
-                <label class="control-label" for="parking">Парковка</label>
-              </li>
-              <li class="form-filter-item">
-                <input class="control-input" type="checkbox" name="wifi" id="wifi">
-                <label class="control-label" for="wifi">Wi-Fi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form-filter-group">
-            <legend class="form-filter-title">Тип жилья:</legend>
-            <ul class="form-filter-list">
-              <li class="form-filter-item">
-               <input class="control-input" type="radio" name="housing-group" id="hotel" value="hotel" checked>
-               <label class="control-label" for="hotel">Гостиница</label>
-              </li>
-              <li class="form-filter-item">
-                <input class="control-input" type="radio" name="housing-group" id="motel" value="motel">
-                <label class="control-label" for="motel">Мотель</label>
-              </li>
-              <li class="form-filter-item">
-                <input class="control-input" type="radio" name="housing-group" id="apartment" value="apartment">
-                <label class="control-label" for="apartment">Апартаменты</label>
-              </li>
-            </ul>
-          </fieldset>
-          <!-- (для себя) Блок с стоимостью в лайве Андрей сказал, что Николай покажет на компонентах-->
-          <button class="button button-blue" type="submit">Применить</button>
-          <button class="button button-transparent" type="reset">Сбросить</button>
-        </form>
-      </section>
+      <div class="catalog-hotels-wrapper">
+        <header class="inner-header">
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">
+                <span class="visually-hidden">Главная</span>
+              </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Гостиницы</a>
+            </li>
+          </ul>
+        </header>
+        <section class="catalog-hotels">
+          <h2 class="visually-hidden">Фильтр выбора гостиниц</h2>
+          <form class="form-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="form-filter-group">
+              <legend class="form-filter-title">Инфраструктура:</legend>
+              <ul class="form-filter-list">
+                <li class="form-filter-item">
+                <input class="control-input" type="checkbox" name="pool" id="pool" checked>
+                <label class="control-label" for="pool">Бассейн</label>
+                </li>
+                <li class="form-filter-item">
+                  <input class="control-input" type="checkbox" name="parking" id="parking" checked>
+                  <label class="control-label" for="parking">Парковка</label>
+                </li>
+                <li class="form-filter-item">
+                  <input class="control-input" type="checkbox" name="wifi" id="wifi">
+                  <label class="control-label" for="wifi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-filter-group">
+              <legend class="form-filter-title">Тип жилья:</legend>
+              <ul class="form-filter-list">
+                <li class="form-filter-item">
+                <input class="control-input" type="radio" name="housing-group" id="hotel" value="hotel" checked>
+                <label class="control-label" for="hotel">Гостиница</label>
+                </li>
+                <li class="form-filter-item">
+                  <input class="control-input" type="radio" name="housing-group" id="motel" value="motel">
+                  <label class="control-label" for="motel">Мотель</label>
+                </li>
+                <li class="form-filter-item">
+                  <input class="control-input" type="radio" name="housing-group" id="apartment" value="apartment">
+                  <label class="control-label" for="apartment">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <!-- (для себя) Блок с стоимостью в лайве Андрей сказал, что Николай покажет на компонентах-->
+            <button class="button button-blue" type="submit">Применить</button>
+            <button class="button button-transparent" type="reset">Сбросить</button>
+          </form>
+        </section>
+      </div>
       <div class="sorting-wrapper">
-        <p class="sorting-result"><b>Найдено гостиниц: 38</b></p> <!--задумался, а стоит ли вкладывать b в p? Я вложил т.к. р контейнер для фразовых тегов, но в некторых местах b идет отдельно. В футере например в странице index или тут в карточках гостиниц -->
+        <p class="sorting-result"><b>Найдено гостиниц: 38</b></p>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвое</option>
           <option value="expensive">Сначала дорогое</option>
@@ -170,22 +173,22 @@
         <button class="button button-blue button-more" type="button">Загрузить ещё</button>
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-current" href="#">1</a>
+            <a class="button button-blue pagination-current" href="#">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
+            <a class="button button-blue" href="#">2</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
+            <a class="button button-blue" href="#">3</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
+            <a class="button button-blue" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">...</a>
+            <a class="button button-blue" href="#">...</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
+            <a class="button button-blue" href="#">10</a>
           </li>
         </ul>
         <p class="hotels-on-page-text">Гостиниц на странице:</p>
