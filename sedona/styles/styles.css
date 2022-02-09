@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  min-height: 100%;
+  min-height: 100%; /* sticky footer */
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -31,7 +31,7 @@ body {
 .body-container {
   width: 1200px;
   margin: 0 auto;
-  display: flex;
+  display: flex; /* sticky footer */
   flex-direction: column;
   min-height: 100%;
 }
@@ -71,6 +71,28 @@ body {
   color: #000000;
 }
 
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  margin-right: 30px;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 460px;
+}
+
+.navigation-user {
+  width: 310px;
+  margin-left: auto;
+}
+
 .navigation-link {
   color: inherit;
   font-size: 20px;
@@ -103,7 +125,7 @@ body {
 }
 
 .main-container {
-  flex-grow: 1;
+  flex-grow: 1; /* sticky footer */
 }
 
 /* intro */
@@ -114,9 +136,9 @@ body {
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  text-align: center;
-  width: 1200px;
-  height: 485px;
+  /* text-align: center; Это для логотипа, убрать и сделать блочный бокс*/
+  /* width: 1200px;
+  height: 485px; */
 }
 
 .main-intro-logo {
