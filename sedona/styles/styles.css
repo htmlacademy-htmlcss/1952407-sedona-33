@@ -14,12 +14,26 @@
   font-display: swap;
 }
 
+html {
+  height: 100%; /* sticky footer */
+}
+
 body {
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background-color: #f2f2f2;
+  margin: 0;
+}
+
+.body-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .button {
@@ -49,6 +63,7 @@ body {
   font-weight: 400;
 }
 
+/* Главная страница Седона */
 /* Шапка */
 
 .page-header {
@@ -85,6 +100,10 @@ body {
 .main-page {
   color: #000000;
   background-color: #ffffff;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 /* intro */
