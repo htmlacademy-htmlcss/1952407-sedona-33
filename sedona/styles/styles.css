@@ -344,9 +344,25 @@ body {
   color: #000000;
 }
 
+/* Поле выбора гостиниц */
+
+.inner-header-title {
+  margin-left: 71px;
+}
+
+.breadcrumbs {
+  margin-left: 71px;
+}
+
+.form-filter {
+  display: flex;
+}
+
 .catalog-hotels-wrapper {
   background: #756257 url("../images/catalog/catalog-background-filter.jpg") no-repeat;
   color: #ffffff;
+  background-size: 100% auto;
+  width: 1200px;
 }
 
 .breadcrumbs-link {
@@ -356,6 +372,36 @@ body {
 .form-filter .button-blue {
   font-size: 16px;
   line-height: 21px;
+}
+
+.form-filter-group {
+  padding: 0;
+}
+
+.form-filter-group:nth-child(1) {
+  width: 150px;
+  margin-right: 67px;
+  margin-left: 71px;
+}
+
+.form-filter-group:nth-child(2) {
+  width: 150px;
+}
+
+.form-filter-group:nth-child(3) {
+  margin-left: auto;
+  width: 287px;
+}
+
+.filter-button-wrapper {
+  margin-right: 71px;
+  margin-left: 81px;
+}
+
+.form-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 /* Сортировка */
