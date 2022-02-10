@@ -363,6 +363,7 @@ body {
   color: #ffffff;
   background-size: 100% auto;
   width: 1200px;
+  /* Так и не понял, нужно или нет задавать фиксированную высоту задней картинки? */
 }
 
 .breadcrumbs-link {
@@ -406,13 +407,34 @@ body {
 
 /* Сортировка */
 
+.sorting-wrapper {
+  display: flex;
+  width: 1058px;
+  margin: 0 auto;
+}
+
 .sorting-result {
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
+  margin-right: auto;
+}
+
+.button-sorting-wrapper {
+  margin-left: 81px;
+}
+
+.button-sorting-wrapper a {
+  color: #000000;
+  text-decoration: none;
 }
 
 /* Карточки гостиниц */
+
+.inner-content {
+  width: 1058px;
+  margin: 0 auto
+}
 
 .content-card-link {
   color: #000000;
@@ -450,7 +472,17 @@ body {
   line-height: 26px;
 }
 
+.button-more {
+  display: block;
+  margin: 0 auto;
+  padding: 17px 0; /*Как ширину посчитать и указать, не могу понять? запаролся с этим на всех кнопках*/
+}
+
 /* Пагинация */
+
+.pagination-container {
+  display: flex;
+}
 
 .pagination .button {
   font-size: 20px;

@@ -45,7 +45,7 @@
         </nav>
       </header>
       <main class="main-inner">
-        <!-- Фильтр гостиниц -->
+        <!-- фильтр гостиниц -->
         <div class="catalog-hotels-wrapper">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -108,6 +108,7 @@
             </form>
           </section>
         </div>
+        <!-- сортировка -->
         <div class="sorting-wrapper">
           <p class="sorting-result"><b>Найдено гостиниц: 38</b></p>
           <select class="select-control" aria-label="Сортировка">
@@ -115,16 +116,19 @@
             <option value="expensive">Сначала дорогое</option>
             <option value="popular">Сначала популярное</option>
           </select>
-          <a class="button-sorting" href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
-          <a class="button-sorting" href="#">
-            <span class="visually-hidden">Показать по одному</span>
-          </a>
-          <a class="button-sorting" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
+          <div class="button-sorting-wrapper">
+            <a class="button-sorting" href="#">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+            <a class="button-sorting" href="#">
+              <span class="visually-hidden">Показать по одному</span>
+            </a>
+            <a class="button-sorting" href="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+          </div>
         </div>
+        <!-- карточки гостиниц -->
         <section class="inner-content">
           <h2 class="inner-content-title">Карточки гостиниц</h2>
           <ul class="inner-content-list">
@@ -178,33 +182,36 @@
             </li>
           </ul>
           <button class="button button-blue button-more" type="button">Загрузить ещё</button>
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a class="button button-blue pagination-current" href="#">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button button-blue" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button button-blue" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button button-blue" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button button-blue" href="#">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button button-blue" href="#">10</a>
-            </li>
-          </ul>
-          <p class="hotels-on-page-text">Гостиниц на странице:</p>
-          <select class="select-control" aria-label="Количество костиниц на странице" >
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four" selected>4</option>
-          </select>
+          <!-- пагинация -->
+          <div class="pagination-container">
+            <ul class="pagination">
+              <li class="pagination-item">
+                <a class="button button-blue pagination-current" href="#">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button button-blue" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button button-blue" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button button-blue" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button button-blue" href="#">...</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button button-blue" href="#">10</a>
+              </li>
+            </ul>
+            <p class="hotels-on-page-text">Гостиниц на странице:</p>
+            <select class="select-control" aria-label="Количество костиниц на странице" >
+              <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four" selected>4</option>
+            </select>
+          </div>
         </section>
       </main>
       <footer class="page-footer">
