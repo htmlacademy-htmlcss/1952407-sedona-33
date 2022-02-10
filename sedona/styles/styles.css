@@ -231,6 +231,8 @@ body {
 
 .search-hotel {
   text-align: center;
+  width: 576px;
+  margin: 0 auto;
 }
 
 .search-hotel-title {
@@ -262,11 +264,13 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   width: 1200px;
-  height: 411px;
+  /* height: 411px; нужна ли высота?*/
   text-align: center;
-  display: flex; /* Можно ли так выровнять текст по центру, или тут другой способ нужен? */
-  flex-direction: column;
-  justify-content: center;
+}
+
+.mailing-container {
+  width: 800px;
+  margin: 0 auto;
 }
 
 .mailing-title {
@@ -493,7 +497,12 @@ body {
 
 .hotels-on-page-text {
   line-height: 23px;
-  color: #333333
+  color: #333333;
+  margin-left: auto;
+}
+
+.select-control {
+  margin-left: 51px;
 }
 
 /* Подвал */
