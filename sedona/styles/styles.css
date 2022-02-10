@@ -346,12 +346,9 @@ body {
 
 /* Поле выбора гостиниц */
 
-.inner-header-title {
-  margin-left: 71px;
-}
-
 .breadcrumbs {
-  margin-left: 71px;
+  padding: 0;
+  list-style-type: none;
 }
 
 .form-filter {
@@ -364,6 +361,8 @@ body {
   background-size: 100% auto;
   width: 1200px;
   /* Так и не понял, нужно или нет задавать фиксированную высоту задней картинки? */
+  padding: 0 71px;
+  box-sizing: border-box;
 }
 
 .breadcrumbs-link {
@@ -382,7 +381,6 @@ body {
 .form-filter-group:nth-child(1) {
   width: 150px;
   margin-right: 67px;
-  margin-left: 71px;
 }
 
 .form-filter-group:nth-child(2) {
@@ -395,7 +393,6 @@ body {
 }
 
 .filter-button-wrapper {
-  margin-right: 71px;
   margin-left: 81px;
 }
 
