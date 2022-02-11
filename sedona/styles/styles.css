@@ -14,6 +14,8 @@
   font-display: swap;
 }
 
+/* общие стили */
+
 html {
   height: 100%; /* sticky footer не работает, не понимаю почему */
 }
@@ -46,6 +48,9 @@ body {
   background-color: #756257;
   text-decoration: none;
   border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .button-blue {
@@ -64,8 +69,20 @@ body {
   font-weight: 400;
 }
 
-/* Главная страница Седона */
-/* Шапка */
+/* обнулене стилей у списков */
+
+.navigation-list,
+.advantages-list,
+.footer-social-list,
+.form-filter-list,
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* главная страница cедона */
+/* шапка */
 
 .page-header {
   background: #ffffff;
@@ -83,9 +100,6 @@ body {
 }
 
 .navigation-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   width: 460px;
 }
 
@@ -107,6 +121,7 @@ body {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
+  padding: 8px 35px;
 }
 
 .navigation-likes-number .likes-number {
@@ -114,8 +129,10 @@ body {
   line-height: 13px;
   font-weight: 400;
   background-color: #7DB54F;
-  border-radius: 50%;
   color: #ffffff;
+  border-radius: 50%;
+  padding: 4px 5px; /* думаю, это как то подругому надо сделать. при изменении количества цифр получается овал )) */
+  display: inline-block;
 }
 
 /* main-page */
@@ -147,7 +164,7 @@ body {
   padding-top: 51px;
 }
 
-/* Заголовок */
+/* заголовок */
 
 .main-page-header {
   text-align: center;
@@ -166,16 +183,12 @@ body {
   font-weight: 400;
 }
 
-/* Преимущества */
+/* преимущества */
 
 .advantages-list {
   text-align: center;
   display: flex;
-  justify-content: space-between; /* Нужно ли это? И так все в притык из за стакана*/
-  /* align-items: center; вопрос про это ниже на 202 строке */
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  justify-content: space-between;
 }
 
 .advantages-list-white {
@@ -198,8 +211,7 @@ body {
 
 .advantages-item {
   width: 400px;
-  /* height: 384px; */
-  /* Нужно ли задавать высоту плиткам? В лайве говорили что не надо задавать флексам высоту, но тогда не понял как сделать нормальные квадраты как в макете, падингами у текста что ли? А текст как посередине тогда, align-items: center? */
+  min-height: 384px;
 }
 
 .advantages-item.advantages-item-with-img {
@@ -207,7 +219,7 @@ body {
 }
 
 .advantages-pic {
-  vertical-align: middle; /* Убирает маленький отступ снизу у картинки */
+  vertical-align: middle;
 }
 
 .advantages-description-title {
@@ -219,19 +231,19 @@ body {
 .advantages-description {
   font-weight: 400;
   color: #333333;
-  padding: 0 75px; /* Внутренние отступы у описания плиток */
+  padding: 0 75px;
 }
 
 .advantages-list-white .advantages-description {
   color: #ffffff;
-  padding: 0 90px; /* Внутренние отступы у описания плиток с синим фоном */
+  padding: 0 90px;
 }
 
-/* Форма поиска гостиницы */
+/* форма поиска гостиницы */
 
 .search-hotel {
   text-align: center;
-  width: 576px;
+  width: 1060px;
   margin: 0 auto;
 }
 
@@ -250,12 +262,12 @@ body {
 .search-hotel .button {
   font-size: 20px;
   line-height: 36px;
-  padding: 15px 0; /*Как с макета мерить ширину кнопки? Там не отображаются горизонтальные падинги, только вертикальные*/
+  padding: 15px 150px; /* Правильная стилизация кнопки? */
   border-radius: 10px;
 }
 
-/* Подвал */
-/* Подписка на рассылку */
+/* подвал */
+/* подписка на рассылку */
 
 .mailing {
   color: #ffffff;
@@ -264,7 +276,7 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   width: 1200px;
-  /* height: 411px; нужна ли высота?*/
+  min-height: 411px;
   text-align: center;
 }
 
@@ -284,20 +296,29 @@ body {
   line-height: 26px;
 }
 
+.mailing-form {
+  display: flex;
+  justify-content: center; /* Правильно форму с кнопкой склеить флексом? */
+}
+
 .mailing-form .button-blue {
   border-radius: 0px 10px 10px 0px;
   font-size: 20px;
   line-height: 26px;
-  /* Не понимаю как застилить кнопку с полем как на макете, нам это покажут позже? */
+  padding: 17px 34px;
 }
 
 .mailing-form .field {
   background-color: #F2F2F2;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px 0px 0px 10px; /* это я сам написал, в фигме почему то так border-radius: 0px 10px 10px 0px;*/
   color: #000000;
+  border: none;
+  padding: 17px 0;
+  padding-left: 22px;
+  width: 578px;
 }
 
-/* Контакты */
+/* контакты */
 
 .footer-contacts {
   background-color: #ffffff;
@@ -312,9 +333,6 @@ body {
 }
 
 .footer-social-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   color: #000000;
 }
 
@@ -348,7 +366,7 @@ body {
   color: #000000;
 }
 
-/* Поле выбора гостиниц */
+/* поле выбора гостиниц */
 
 .breadcrumbs {
   padding: 0;
@@ -364,7 +382,7 @@ body {
   color: #ffffff;
   background-size: 100% auto;
   width: 1200px;
-  /* Так и не понял, нужно или нет задавать фиксированную высоту задней картинки? */
+  min-height: 408px;
   padding: 0 71px;
   box-sizing: border-box;
 }
@@ -376,6 +394,11 @@ body {
 .form-filter .button-blue {
   font-size: 16px;
   line-height: 21px;
+  padding: 14px 35px;
+}
+
+.form-filter .button-transparent {
+  padding: 13px 44px;
 }
 
 .form-filter-group {
@@ -400,13 +423,7 @@ body {
   margin-left: 81px;
 }
 
-.form-filter-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-/* Сортировка */
+/* сортировка */
 
 .sorting-wrapper {
   display: flex;
@@ -430,7 +447,7 @@ body {
   text-decoration: none;
 }
 
-/* Карточки гостиниц */
+/* карточки гостиниц */
 
 .inner-content {
   width: 1058px;
@@ -456,6 +473,11 @@ body {
 .inner-content-card .button {
   font-size: 16px;
   line-height: 21px;
+  padding: 8px 21px;
+}
+
+.inner-content-card .button-green {
+  padding: 8px 19px;
 }
 
 .hotel-rating {
@@ -468,18 +490,17 @@ body {
   border-radius: 4px;
 }
 
+.button-more-wrapper {
+  text-align: center;
+}
+
 .button-more {
   font-size: 20px;
   line-height: 26px;
+  padding: 17px 238px;  /* Правильная стилизация кнопки? */
 }
 
-.button-more {
-  display: block;
-  margin: 0 auto;
-  padding: 17px 0; /*Как ширину посчитать и указать, не могу понять? запаролся с этим на всех кнопках*/
-}
-
-/* Пагинация */
+/* пагинация */
 
 .pagination-container {
   display: flex;
@@ -488,6 +509,7 @@ body {
 .pagination .button {
   font-size: 20px;
   line-height: 26px;
+  padding: 15px 22px; /* Думаю тут тоже надо как то подругому как и в шапке с обводкой избранного (likes-number). Как реализовать одинаковый квадрат? Пока непонимаю*/
 }
 
 .pagination-current {
@@ -503,9 +525,11 @@ body {
 
 .select-control {
   margin-left: 51px;
+  width: 160px;
+  cursor: pointer;
 }
 
-/* Подвал */
+/* подвал каталога */
 
 .mailing-no-bg-img {
   background-image: none;
