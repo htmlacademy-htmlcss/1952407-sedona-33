@@ -208,8 +208,9 @@ body {
 .main-page-intro {
   color: #f2f2f2;
   background-color: #333333;
-  background-image: url("../images/index-background.jpg");
-  background-repeat: no-repeat;
+  background:
+  url("../images/bg-into-devider.svg") no-repeat center bottom,
+  url("../images/index-background.jpg") no-repeat;
   background-size: 100% auto;
   width: 1200px;
   height: 485px;
