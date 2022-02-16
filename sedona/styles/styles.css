@@ -1,3 +1,5 @@
+/* подключение шрифтов */
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -17,13 +19,17 @@
 /* общие стили */
 
 html {
-  height: 100%; /* sticky footer не работал из-за стакана */
+  /* sticky footer */
+  height: 100%;
 }
 
 body {
-  min-height: 100%; /* sticky footer */
-  display: flex; /* sticky footer */
-  flex-direction: column; /* sticky footer */
+  /* sticky footer */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  /* основной шрифт и фон всей страницы */
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -32,18 +38,33 @@ body {
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .body-container {
+  /* стакан */
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-  display: flex; /* sticky footer */
-  flex-direction: column; /* sticky footer */
-  min-height: 100%; /* sticky footer */
-  flex-grow: 1; /* sticky footer */
+
+  /* sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  flex-grow: 1;
 }
 
 .main-container {
-  flex-grow: 1; /* sticky footer */
+  /* sticky footer */
+  flex-grow: 1;
 }
 
 .button {
@@ -100,19 +121,36 @@ body {
   display: flex;
   width: 1060px;
   margin: 0 auto;
+
+  /* позиционирование логотипа */
+  margin-bottom: -4px;
 }
 
 .navigation-logo {
   margin-right: 30px;
+
+  /* позиционирование логотипа */
+  z-index: 1;
+}
+
+.page-header-logo {
+  vertical-align: middle;
 }
 
 .navigation-list {
   width: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  /* позиционирование логотипа */
+  margin-top: -4px;
 }
 
 .navigation-user {
-  width: 310px;
+  width: 350px;
   margin-left: auto;
+  justify-content: flex-end;
 }
 
 .navigation-link {
@@ -122,6 +160,21 @@ body {
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+  display: block;
+  cursor: pointer;
+
+  padding: 20px 0px;
+  margin: 0 17px;
+}
+
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
+  /* (для себя) возможно хрень и надо псевдоклассом after делать */
+}
+
+.navigation-user .navigation-link:not(:last-child) {
+  min-width: 42px;
+  min-height: 66px;
 }
 
 .navigation-link.button {
@@ -147,6 +200,7 @@ body {
 .main-page {
   color: #000000;
   background-color: #ffffff;
+  z-index: -1;
 }
 
 /* intro */
@@ -509,10 +563,16 @@ body {
   display: flex;
 }
 
-.pagination .button {
+.pagination-item {
+  width: 55px;
+  height: 55px;
+}
+
+.pagination-item .button {
   font-size: 20px;
   line-height: 26px;
   padding: 15px 22px; /* Думаю тут тоже надо как то подругому как и в шапке с обводкой избранного (likes-number). Как реализовать одинаковый квадрат? Пока непонимаю*/
+  /* box-sizing: border-box; */
 }
 
 .pagination-current {
