@@ -211,7 +211,7 @@ body {
   color: #f2f2f2;
   background-color: #333333;
   background:
-  url("../images/bg-into-devider.svg") no-repeat center bottom,
+  url("../images/bg-into-devider.svg") no-repeat center 428px,
   url("../images/index-background.jpg") no-repeat;
   background-size: 100% auto;
   width: 1200px;
