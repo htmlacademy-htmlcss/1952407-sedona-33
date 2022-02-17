@@ -122,9 +122,10 @@ body {
   display: flex;
   width: 1060px;
   margin: 0 auto;
+  align-items: flex-start;
 
   /* позиционирование логотипа */
-  margin-bottom: -4px;
+  margin-bottom: -7px;
 }
 
 .navigation-logo {
@@ -312,26 +313,31 @@ body {
   text-align: center;
   width: 1060px;
   margin: 0 auto;
-  margin-bottom: 93px;
+
 }
 
 .search-hotel-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 29px;
 }
 
 .search-hotel-description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin-top: 0;
+  margin-bottom: 56px;
 }
 
 .search-hotel .button {
   font-size: 20px;
   line-height: 36px;
-  padding: 15px 150px; /* Правильная стилизация кнопки? */
+  padding: 15px 150px;
   border-radius: 10px;
+  margin-bottom: 93px;
 }
 
 /* подвал */
@@ -357,16 +363,21 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  display: block;
+  padding-top: 91px;
+  margin-bottom: 29px;
 }
 
 .mailing-description {
   font-size: 22px;
   line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 46px;
 }
 
 .mailing-form {
   display: flex;
-  justify-content: center; /* Правильно форму с кнопкой склеить флексом? */
+  justify-content: center;
 }
 
 .mailing-form .button-blue {
@@ -393,15 +404,29 @@ body {
   color: #000000;
   display: flex;
   justify-content: space-between;
+  padding: 43px 0;
+  padding-bottom: 36.5px;
 }
 
 .footer-social {
-  width: 107px;
+  width: 237px;
   margin-left: 72px;
 }
 
 .footer-social-list {
   color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social-item {
+  width: 34px;
+  height: 34px;
+}
+
+.footer-social-item:not(:nth-child(6n)) {
+  margin-right: 6.5px;
+  margin-bottom: 6.5px;
 }
 
 .footer-social-list a {
@@ -410,7 +435,7 @@ body {
 }
 
 .footer-phone {
-  width: 720px;
+  width: 520px;
   text-align: center;
 }
 
@@ -422,8 +447,11 @@ body {
 }
 
 .footer-logo {
-  width: 115px;
+  width: 237px;
   margin-right: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 /* catalog */
