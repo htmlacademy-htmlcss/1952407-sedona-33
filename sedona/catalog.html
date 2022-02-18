@@ -47,10 +47,10 @@
       </header>
       <!-- основное содержимое каталога -->
       <main class="main-inner main-container">
-        <!-- фильтр гостиниц -->
         <div class="catalog-hotels-wrapper">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
+            <!-- хлебные крошки -->
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">
@@ -62,6 +62,7 @@
               </li>
             </ul>
           </header>
+          <!-- фильтр выбора гостиниц -->
           <section class="catalog-hotels">
             <h2 class="visually-hidden">Фильтр выбора гостиниц</h2>
             <form class="form-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -69,8 +70,8 @@
                 <legend class="form-filter-title">Инфраструктура:</legend>
                 <ul class="form-filter-list">
                   <li class="form-filter-item">
-                  <input class="control-input" type="checkbox" name="pool" id="pool" checked>
-                  <label class="control-label" for="pool">Бассейн</label>
+                    <input class="control-input" type="checkbox" name="pool" id="pool" checked>
+                    <label class="control-label" for="pool">Бассейн</label>
                   </li>
                   <li class="form-filter-item">
                     <input class="control-input" type="checkbox" name="parking" id="parking" checked>
@@ -86,8 +87,8 @@
                 <legend class="form-filter-title">Тип жилья:</legend>
                 <ul class="form-filter-list">
                   <li class="form-filter-item">
-                  <input class="control-input" type="radio" name="housing-group" id="hotel" value="hotel" checked>
-                  <label class="control-label" for="hotel">Гостиница</label>
+                    <input class="control-input" type="radio" name="housing-group" id="hotel" value="hotel" checked>
+                    <label class="control-label" for="hotel">Гостиница</label>
                   </li>
                   <li class="form-filter-item">
                     <input class="control-input" type="radio" name="housing-group" id="motel" value="motel">
@@ -101,7 +102,6 @@
               </fieldset>
               <fieldset class="form-filter-group">
                 <legend class="form-filter-title">Стоимость, ₽:</legend>
-                <!-- (для себя) Блок с стоимостью в лайве Андрей сказал, что Николай покажет на компонентах-->
               </fieldset>
               <div class="filter-button-wrapper">
                 <button class="button button-blue" type="submit">Применить</button>
