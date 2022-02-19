@@ -105,7 +105,8 @@ body {
 .footer-social-list,
 .form-filter-list,
 .pagination,
-.breadcrumbs {
+.breadcrumbs,
+.inner-content-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -630,6 +631,14 @@ body {
   margin: 0 auto
 }
 
+.inner-content-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 18px;
+  row-gap: 10px;
+  margin-bottom: 34px;
+}
+
 .content-card-link {
   color: #000000;
   text-decoration-line: none;
@@ -666,32 +675,45 @@ body {
   border-radius: 4px;
 }
 
+/* загрузить еще */
+
 .button-more-wrapper {
   text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  margin-bottom: 30px;
 }
 
 .button-more {
   font-size: 20px;
   line-height: 26px;
-  padding: 17px 238px;  /* Правильная стилизация кнопки? */
+  padding: 17px 238px;
 }
 
 /* пагинация */
 
 .pagination-container {
   display: flex;
+  align-items: center;
 }
 
-.pagination-item {
-  width: 55px;
-  height: 55px;
+.pagination {
+  display: flex;
+  margin-right: auto;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .pagination-item .button {
   font-size: 20px;
   line-height: 26px;
-  padding: 15px 22px; /* Думаю тут тоже надо как то подругому как и в шапке с обводкой избранного (likes-number). Как реализовать одинаковый квадрат? Пока непонимаю*/
-  /* box-sizing: border-box; */
+  width: 55px;
+  height: 55px;
+  padding-top: 25%;
+  box-sizing: border-box;
 }
 
 .pagination-current {
@@ -700,17 +722,18 @@ body {
 }
 
 .hotels-on-page-text {
+  margin: 0;
+  margin-right: 51px;
   line-height: 23px;
   color: #333333;
-  margin-left: auto;
 }
 
-/* .select-control {
-  margin-left: 51px;
+.select-control-hotels {
+  padding-left: 17px;
   width: 160px;
+  min-height: 48px;
   cursor: pointer;
-} */
-/* поменять название класса. 1в1 как в сортировке */
+}
 
 /* подвал каталога */
 
