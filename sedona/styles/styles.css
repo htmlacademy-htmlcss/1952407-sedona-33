@@ -493,6 +493,7 @@ body {
   width: 1200px;
   min-height: 408px;
   padding: 0 71px;
+  margin-bottom: 44px;
   box-sizing: border-box;
 }
 
@@ -508,10 +509,11 @@ body {
   font-size: 16px;
   margin-bottom: 45px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 .breadcrumbs-link {
@@ -584,22 +586,41 @@ body {
   display: flex;
   width: 1058px;
   margin: 0 auto;
+  margin-bottom: 53px;
+  align-items: center;
 }
 
 .sorting-result {
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
+  margin: 0;
+  margin-right: 192px;
+}
+
+.select-control {
+  width: 287px;
+  min-height: 48px;
+  padding-left: 19px;
+  cursor: pointer;
   margin-right: auto;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .button-sorting-wrapper {
-  margin-left: 81px;
+  display: flex;
 }
 
-.button-sorting-wrapper a {
+.button-sorting-wrapper .button-sorting {
   color: #000000;
   text-decoration: none;
+  width: 48px;
+  height: 48px;
+}
+
+.button-sorting-wrapper .button-sorting:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* карточки гостиниц */
@@ -684,11 +705,12 @@ body {
   margin-left: auto;
 }
 
-.select-control {
+/* .select-control {
   margin-left: 51px;
   width: 160px;
   cursor: pointer;
-}
+} */
+/* поменять название класса. 1в1 как в сортировке */
 
 /* подвал каталога */
 
