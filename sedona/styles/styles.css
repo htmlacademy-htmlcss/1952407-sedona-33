@@ -195,8 +195,11 @@ body {
   background-color: #7DB54F;
   color: #ffffff;
   border-radius: 50%;
-  padding: 4px 5px; /* думаю, это как то подругому надо сделать. при изменении количества цифр получается овал )) */
   display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-top: 2.5px;
+  box-sizing: border-box;
 }
 
 /* main-page */
