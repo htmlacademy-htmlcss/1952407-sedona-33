@@ -1,3 +1,5 @@
+/* подключение шрифтов */
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -17,13 +19,17 @@
 /* общие стили */
 
 html {
-  height: 100%; /* sticky footer не работал из-за стакана */
+  /* sticky footer */
+  height: 100%;
 }
 
 body {
-  min-height: 100%; /* sticky footer */
-  display: flex; /* sticky footer */
-  flex-direction: column; /* sticky footer */
+  /* sticky footer */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  /* основной шрифт и фон всей страницы */
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -32,18 +38,34 @@ body {
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .body-container {
+  /* стакан */
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-  display: flex; /* sticky footer */
-  flex-direction: column; /* sticky footer */
-  min-height: 100%; /* sticky footer */
-  flex-grow: 1; /* sticky footer */
+
+  /* sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  flex-grow: 1;
+  z-index: 1;
 }
 
 .main-container {
-  flex-grow: 1; /* sticky footer */
+  /* sticky footer */
+  flex-grow: 1;
 }
 
 .button {
@@ -82,7 +104,9 @@ body {
 .advantages-list,
 .footer-social-list,
 .form-filter-list,
-.pagination {
+.pagination,
+.breadcrumbs,
+.inner-content-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -100,19 +124,37 @@ body {
   display: flex;
   width: 1060px;
   margin: 0 auto;
+  align-items: flex-start;
+
+  /* позиционирование логотипа */
+  margin-bottom: -7px;
 }
 
 .navigation-logo {
   margin-right: 30px;
+
+  /* позиционирование логотипа */
+  z-index: 1;
+}
+
+.page-header-logo {
+  vertical-align: middle;
 }
 
 .navigation-list {
   width: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  /* позиционирование логотипа */
+  margin-top: -4px;
 }
 
 .navigation-user {
-  width: 310px;
+  width: 350px;
   margin-left: auto;
+  justify-content: flex-end;
 }
 
 .navigation-link {
@@ -122,6 +164,21 @@ body {
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+  display: block;
+  cursor: pointer;
+
+  padding: 20px 0px;
+  margin: 0 17px;
+}
+
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
+  /* (для себя) возможно хрень и надо псевдоклассом after делать */
+}
+
+.navigation-user .navigation-link:not(:last-child) {
+  min-width: 42px;
+  min-height: 66px;
 }
 
 .navigation-link.button {
@@ -138,8 +195,11 @@ body {
   background-color: #7DB54F;
   color: #ffffff;
   border-radius: 50%;
-  padding: 4px 5px; /* думаю, это как то подругому надо сделать. при изменении количества цифр получается овал )) */
   display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-top: 2.5px;
+  box-sizing: border-box;
 }
 
 /* main-page */
@@ -147,6 +207,7 @@ body {
 .main-page {
   color: #000000;
   background-color: #ffffff;
+  z-index: -1;
 }
 
 /* intro */
@@ -154,11 +215,13 @@ body {
 .main-page-intro {
   color: #f2f2f2;
   background-color: #333333;
-  background-image: url("../images/index-background.jpg");
-  background-repeat: no-repeat;
+  background:
+  url("../images/bg-into-devider.svg") no-repeat center 428px,
+  url("../images/index-background.jpg") no-repeat;
   background-size: 100% auto;
   width: 1200px;
   height: 485px;
+  margin-bottom: 63px;
 }
 
 .main-intro-logo {
@@ -178,25 +241,28 @@ body {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
+  display: block;
+  margin-bottom: 31px;
 }
 
 .main-page-text {
   font-size: 22px;
   line-height: 36px;
   font-weight: 400;
+  margin: 0 0 80px 0;
 }
 
 /* преимущества */
+
+.advantages {
+  margin-bottom: 91px;
+}
 
 .advantages-list {
   text-align: center;
   display: flex;
   justify-content: space-between;
-}
-
-.advantages-list-white {
-  background-color: #83b3d3;
-  color: #ffffff;
+  flex-wrap: wrap;
 }
 
 .advantages-list:nth-of-type(2) .advantages-item:nth-child(2n+1),
@@ -215,6 +281,14 @@ body {
 .advantages-item {
   width: 400px;
   min-height: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.advantages-item-white {
+  background-color: #83b3d3;
+  color: #ffffff;
 }
 
 .advantages-item.advantages-item-with-img {
@@ -231,15 +305,31 @@ body {
   text-transform: uppercase;
 }
 
+.item-font-correction .advantages-description-title {
+  display: block;
+  margin: 0;
+  padding: 23px 0 20px;
+}
+
 .advantages-description {
   font-weight: 400;
   color: #333333;
   padding: 0 75px;
+  margin: 0;
 }
 
-.advantages-list-white .advantages-description {
+.item-font-correction:nth-child(1) .advantages-description {
+  padding: 0 110px;
+}
+
+.advantages-item-white .advantages-description {
   color: #ffffff;
   padding: 0 90px;
+}
+
+.advantages-item .description-number {
+  padding: 30px 0;
+  margin: 0;
 }
 
 /* форма поиска гостиницы */
@@ -248,25 +338,31 @@ body {
   text-align: center;
   width: 1060px;
   margin: 0 auto;
+
 }
 
 .search-hotel-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 29px;
 }
 
 .search-hotel-description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin-top: 0;
+  margin-bottom: 56px;
 }
 
 .search-hotel .button {
   font-size: 20px;
   line-height: 36px;
-  padding: 15px 150px; /* Правильная стилизация кнопки? */
+  padding: 15px 150px;
   border-radius: 10px;
+  margin-bottom: 93px;
 }
 
 /* подвал */
@@ -292,16 +388,21 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  display: block;
+  padding-top: 91px;
+  margin-bottom: 29px;
 }
 
 .mailing-description {
   font-size: 22px;
   line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 46px;
 }
 
 .mailing-form {
   display: flex;
-  justify-content: center; /* Правильно форму с кнопкой склеить флексом? */
+  justify-content: center;
 }
 
 .mailing-form .button-blue {
@@ -328,15 +429,29 @@ body {
   color: #000000;
   display: flex;
   justify-content: space-between;
+  padding: 43px 0;
+  padding-bottom: 36.5px;
 }
 
 .footer-social {
-  width: 107px;
+  width: 237px;
   margin-left: 72px;
 }
 
 .footer-social-list {
   color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social-item {
+  width: 34px;
+  height: 34px;
+}
+
+.footer-social-item:not(:nth-child(6n)) {
+  margin-right: 6.5px;
+  margin-bottom: 6.5px;
 }
 
 .footer-social-list a {
@@ -345,7 +460,7 @@ body {
 }
 
 .footer-phone {
-  width: 720px;
+  width: 520px;
   text-align: center;
 }
 
@@ -357,8 +472,11 @@ body {
 }
 
 .footer-logo {
-  width: 115px;
+  width: 237px;
   margin-right: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 /* catalog */
@@ -367,18 +485,10 @@ body {
 .main-inner {
   background-color: #ffffff;
   color: #000000;
+  z-index: -1;
 }
 
 /* поле выбора гостиниц */
-
-.breadcrumbs {
-  padding: 0;
-  list-style-type: none;
-}
-
-.form-filter {
-  display: flex;
-}
 
 .catalog-hotels-wrapper {
   background: #756257 url("../images/catalog/catalog-background-filter.jpg") no-repeat;
@@ -387,25 +497,40 @@ body {
   width: 1200px;
   min-height: 408px;
   padding: 0 71px;
+  margin-bottom: 44px;
   box-sizing: border-box;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  margin: 0;
+  padding-top: 35px;
+  margin-bottom: 5px;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  margin-bottom: 45px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .breadcrumbs-link {
   color: inherit;
 }
 
-.form-filter .button-blue {
-  font-size: 16px;
-  line-height: 21px;
-  padding: 14px 35px;
-}
-
-.form-filter .button-transparent {
-  padding: 13px 44px;
+.form-filter {
+  display: flex;
 }
 
 .form-filter-group {
   padding: 0;
+  border: none;
 }
 
 .form-filter-group:nth-child(1) {
@@ -422,8 +547,41 @@ body {
   width: 287px;
 }
 
+.form-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.control-label {
+  line-height: 23px;
+  display: inline-block;
+  padding-bottom: 13px;
+}
+
+.form-filter-item:first-child .control-label {
+  padding-top: 30px;
+}
+
+.form-filter-item:last-child .control-label {
+  padding-bottom: 0;
+}
+
 .filter-button-wrapper {
   margin-left: 81px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.form-filter .button-blue {
+  font-size: 16px;
+  line-height: 21px;
+  padding: 14px 35px;
+}
+
+.form-filter .button-transparent {
+  padding: 13px 44px;
 }
 
 /* сортировка */
@@ -432,22 +590,41 @@ body {
   display: flex;
   width: 1058px;
   margin: 0 auto;
+  margin-bottom: 53px;
+  align-items: center;
 }
 
 .sorting-result {
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
+  margin: 0;
+  margin-right: 192px;
+}
+
+.select-control {
+  width: 287px;
+  min-height: 48px;
+  padding-left: 19px;
+  cursor: pointer;
   margin-right: auto;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .button-sorting-wrapper {
-  margin-left: 81px;
+  display: flex;
 }
 
-.button-sorting-wrapper a {
+.button-sorting-wrapper .button-sorting {
   color: #000000;
   text-decoration: none;
+  width: 48px;
+  height: 48px;
+}
+
+.button-sorting-wrapper .button-sorting:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* карточки гостиниц */
@@ -455,6 +632,14 @@ body {
 .inner-content {
   width: 1058px;
   margin: 0 auto
+}
+
+.inner-content-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 18px;
+  row-gap: 10px;
+  margin-bottom: 34px;
 }
 
 .content-card-link {
@@ -493,26 +678,45 @@ body {
   border-radius: 4px;
 }
 
+/* загрузить еще */
+
 .button-more-wrapper {
   text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  margin-bottom: 30px;
 }
 
 .button-more {
   font-size: 20px;
   line-height: 26px;
-  padding: 17px 238px;  /* Правильная стилизация кнопки? */
+  padding: 17px 238px;
 }
 
 /* пагинация */
 
 .pagination-container {
   display: flex;
+  align-items: center;
 }
 
-.pagination .button {
+.pagination {
+  display: flex;
+  margin-right: auto;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-item .button {
   font-size: 20px;
   line-height: 26px;
-  padding: 15px 22px; /* Думаю тут тоже надо как то подругому как и в шапке с обводкой избранного (likes-number). Как реализовать одинаковый квадрат? Пока непонимаю*/
+  width: 55px;
+  height: 55px;
+  padding-top: 25%;
+  box-sizing: border-box;
 }
 
 .pagination-current {
@@ -521,14 +725,16 @@ body {
 }
 
 .hotels-on-page-text {
+  margin: 0;
+  margin-right: 51px;
   line-height: 23px;
   color: #333333;
-  margin-left: auto;
 }
 
-.select-control {
-  margin-left: 51px;
+.select-control-hotels {
+  padding-left: 17px;
   width: 160px;
+  min-height: 48px;
   cursor: pointer;
 }
 
