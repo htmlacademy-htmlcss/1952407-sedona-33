@@ -647,10 +647,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 18px;
   row-gap: 10px;
-  /* align-items: center; */
-  margin: 0 auto;
   margin-bottom: 34px;
-  /* width: 1056px; */
 }
 
 .content-card-text,
@@ -663,7 +660,7 @@ body {
 
 .inner-content-card {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: repeat(3, auto);
   column-gap: 8px;
   row-gap: 16px;
   padding: 20px;
@@ -706,12 +703,13 @@ body {
   grid-column: 2 / 4;
   padding: 10px 0 9px;
   margin: 0;
+  justify-self: end;
 }
 
 .inner-content-card .button {
   font-size: 16px;
   line-height: 21px;
-  padding: 8px 21px;
+  padding: 8px 2px;
   align-self: center;
   box-sizing: border-box;
 }
