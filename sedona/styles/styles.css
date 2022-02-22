@@ -243,6 +243,11 @@ body {
   color: #000000;
   display: block;
   margin-bottom: 31px;
+  display: block;
+  width: 720px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 31px;
 }
 
 .main-page-text {
@@ -297,12 +302,15 @@ body {
 
 .advantages-pic {
   vertical-align: middle;
+  object-fit: cover;
+  height: 100%;
 }
 
 .advantages-description-title {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin-top: 50px
 }
 
 .item-font-correction .advantages-description-title {
@@ -316,6 +324,7 @@ body {
   color: #333333;
   padding: 0 75px;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .item-font-correction:nth-child(1) .advantages-description {
