@@ -243,6 +243,10 @@ body {
   color: #000000;
   display: block;
   margin-bottom: 31px;
+  width: 720px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 31px;
 }
 
 .main-page-text {
@@ -297,12 +301,15 @@ body {
 
 .advantages-pic {
   vertical-align: middle;
+  object-fit: cover;
+  height: 100%;
 }
 
 .advantages-description-title {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin-top: 50px
 }
 
 .item-font-correction .advantages-description-title {
@@ -316,6 +323,7 @@ body {
   color: #333333;
   padding: 0 75px;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .item-font-correction:nth-child(1) .advantages-description {
@@ -642,12 +650,36 @@ body {
   margin-bottom: 34px;
 }
 
+.content-card-text,
+.content-card-price,
+.hotel-stars,
+.hotel-rating {
+  align-self: center;
+}
+
+
+.inner-content-card {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 8px;
+  row-gap: 16px;
+  padding: 20px;
+}
+
 .content-card-link {
   color: #000000;
   text-decoration-line: none;
+  grid-column: 1 / -1;
+}
+
+.content-card-title {
   font-size: 24px;
   line-height: 31px;
-  font-weight: 700;
+  margin: 16px 0 0 0;
+}
+
+.content-card-img {
+  width: 100%;
 }
 
 .content-card-text,
@@ -656,16 +688,46 @@ body {
   line-height: 23px;
   font-weight: 400;
   color: #333333;
+  margin: 0;
+}
+
+.content-card-text {
+  grid-column: 1 / 2;
+}
+
+.content-card-price {
+  grid-column: 3 / 4;
+}
+
+.hotel-rating {
+  grid-column: 2 / 4;
+  padding: 10px 0 9px;
+  margin: 0;
+  justify-self: end;
 }
 
 .inner-content-card .button {
   font-size: 16px;
   line-height: 21px;
-  padding: 8px 21px;
+  padding: 8px 2px;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.inner-content-card .button-brown {
+  grid-column: 1 / 2;
+  min-width: 131px;
+}
+
+.inner-content-card .button-blue {
+  grid-column: 3 / 4;
+  min-width: 141px;
 }
 
 .inner-content-card .button-green {
   padding: 8px 19px;
+  grid-column: 3 / 4;
+  min-width: 141px;
 }
 
 .hotel-rating {
@@ -676,6 +738,7 @@ body {
   color: #333333;
   background-color: #F2F2F2;
   border-radius: 4px;
+  width: 160px;
 }
 
 /* загрузить еще */
