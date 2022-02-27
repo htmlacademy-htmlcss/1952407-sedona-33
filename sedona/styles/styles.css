@@ -127,14 +127,12 @@ body {
   align-items: flex-start;
 
   /* позиционирование логотипа */
-  margin-bottom: -7px;
+  margin-bottom: -5px;
 }
 
 .navigation-logo {
   margin-right: 30px;
-
-  /* позиционирование логотипа */
-  z-index: 1;
+  cursor: pointer;
 }
 
 .page-header-logo {
@@ -146,15 +144,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  /* позиционирование логотипа */
-  margin-top: -4px;
 }
 
 .navigation-user {
   width: 350px;
   margin-left: auto;
   justify-content: flex-end;
+  min-height: 70px;
 }
 
 .navigation-link {
@@ -164,28 +160,29 @@ body {
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   cursor: pointer;
-
   padding: 20px 0px;
   margin: 0 17px;
 }
 
 .navigation-link-current {
   border-bottom: 2px solid #756257;
-  /* (для себя) возможно хрень и надо псевдоклассом after делать */
+  padding-bottom: 18px;
 }
 
-.navigation-user .navigation-link:not(:last-child) {
-  min-width: 42px;
-  min-height: 66px;
+.navigation-link-user {
+  display: inline-block;
+  position: relative;
+  padding: 18px 12px;
 }
 
-.navigation-link.button {
+.navigation-link-user.button {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  padding: 8px 35px;
+  padding: 8px 34px;
+  margin-left: 18px;
 }
 
 .navigation-likes-number .likes-number {
@@ -200,6 +197,18 @@ body {
   height: 20px;
   padding-top: 2.5px;
   box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  left: 11px;
+  bottom: 7px;
+}
+
+.navigation-icon {
+  position: absolute;
+  color: #000000;
+  top: 46%;
+  left: 45%;
+  transform: translate(-50%, -50%);
 }
 
 /* main-page */
@@ -216,7 +225,7 @@ body {
   color: #f2f2f2;
   background-color: #333333;
   background:
-  url("../images/bg-into-devider.svg") no-repeat center 428px,
+  url("../images/bg-into-devider.svg") no-repeat center bottom /*428px*/,
   url("../images/index-background.jpg") no-repeat;
   background-size: 100% auto;
   width: 1200px;
@@ -288,6 +297,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .advantages-item-white {
@@ -309,7 +319,8 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  margin-top: 50px
+  margin-top: 50px;
+  width: 200px;
 }
 
 .item-font-correction .advantages-description-title {
