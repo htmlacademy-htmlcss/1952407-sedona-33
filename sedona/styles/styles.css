@@ -295,10 +295,6 @@ body {
 .advantages-item {
   width: 400px;
   min-height: 384px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .advantages-item-white {
@@ -322,12 +318,48 @@ body {
   text-transform: uppercase;
   margin-top: 50px;
   width: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 98px;
+  position: relative;
 }
 
 .item-font-correction .advantages-description-title {
-  display: block;
-  margin: 0;
-  padding: 23px 0 20px;
+  margin-top: 185px;
+  margin-bottom: 20px;
+}
+
+.item-font-correction:nth-child(1) .advantages-description-title::before {
+  content: "";
+  position: absolute;
+  left: 63px;
+  bottom: 52px;
+  background-image: url("../images/house-advantages.svg");
+  background-repeat: no-repeat;
+  width: 74.7px;
+  height: 72px;
+}
+
+.item-font-correction:nth-child(2) .advantages-description-title::before {
+  content: "";
+  position: absolute;
+  bottom: 52px;
+  left: 63px;
+  background-image: url("../images/burger-advantages.svg");
+  background-repeat: no-repeat;
+  width: 74px;
+  height: 70px;
+}
+
+.item-font-correction:nth-child(3) .advantages-description-title::before {
+  content: "";
+  position: absolute;
+  bottom: 52px;
+  left: 68px;
+  background-image: url("../images/gift-advantages.svg");
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 76px;
 }
 
 .advantages-description {
@@ -348,8 +380,7 @@ body {
 }
 
 .advantages-item .description-number {
-  padding: 30px 0;
-  margin: 0;
+  margin: 30px 0;
 }
 
 /* форма поиска гостиницы */
