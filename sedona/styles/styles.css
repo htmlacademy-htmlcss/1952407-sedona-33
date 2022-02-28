@@ -80,6 +80,7 @@ body {
   border: none;
   cursor: pointer;
   display: inline-block;
+  box-sizing: border-box;
 }
 
 .button-blue {
@@ -184,6 +185,7 @@ body {
   line-height: 20px;
   padding: 8px 34px;
   margin-left: 18px;
+  transform: translate(0, -2.4px);
 }
 
 .navigation-likes-number .likes-number {
@@ -210,6 +212,34 @@ body {
   top: 46%;
   left: 45%;
   transform: translate(-50%, -50%);
+}
+
+.navigation-link:hover,
+.navigation-link-user:hover svg {
+  color: #756257;
+}
+
+.navigation-link-user.button:hover {
+  background: #615048;
+}
+
+.navigation-link:active,
+.navigation-link-user:active svg {
+  color: rgba(117, 98, 87, 0.3);
+}
+
+.navigation-link-user:active .likes-number {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-link-user.button:active {
+  background: #615048;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-link-user.button:focus-visible {
+  background: #615048;
+  outline: 3px solid #83b3d3;
 }
 
 /* main-page */
@@ -690,6 +720,40 @@ body {
   text-decoration: none;
   width: 48px;
   height: 48px;
+  box-sizing: border-box;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+.button-sorting-wrapper .button-sorting-current {
+  border: 2px solid #000000;
+}
+
+.button-sorting-wrapper .button-sorting:nth-child(1) {
+  background-image: url("../images/catalog/sorting-cards.svg") ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-sorting-wrapper .button-sorting:nth-child(2) {
+  background-image: url("../images/catalog/sorting-one-by-one.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-sorting-wrapper .button-sorting:nth-child(3) {
+  background-image: url("../images/catalog/sorting-list.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-sorting-wrapper .button-sorting:hover {
+  border: 2px solid #83B3D3;
+}
+
+.button-sorting-wrapper .button-sorting:focus-visible {
+  outline: none;
+  border: 2px solid #83B3D3;
 }
 
 .button-sorting-wrapper .button-sorting:not(:last-child) {
