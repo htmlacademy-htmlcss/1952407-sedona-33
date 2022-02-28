@@ -611,7 +611,7 @@ body {
 
 .footer-phone {
   text-align: center;
-  margin-right: 12px;
+  margin-right: 15px;
 }
 
 .footer-phone a {
@@ -700,22 +700,36 @@ body {
   line-height: 78px;
   margin: 0;
   padding-top: 35px;
-  margin-bottom: 5px;
 }
 
 .breadcrumbs {
   font-size: 16px;
+  margin-top: -6px;
   margin-bottom: 45px;
+  margin-left: 2px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .breadcrumbs-item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 26px;
+  position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/catalog/arrow-breadcrumbs.svg);
+  width: 5px;
+  height: 8px;
+  top: 7px;
+  right: -15px;
+  opacity: 0.3;
 }
 
 .breadcrumbs-link {
   color: inherit;
+  cursor: pointer;
 }
 
 .form-filter {
