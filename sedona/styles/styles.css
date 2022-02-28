@@ -1080,7 +1080,6 @@ body {
   outline-offset: -1px;
 }
 
-
 .hotel-rating {
   font-size: 16px;
   line-height: 21px;
@@ -1091,6 +1090,28 @@ body {
   border-radius: 4px;
   width: 160px;
 }
+
+.hotel-stars {
+  min-height: 18px;
+  width: 117px;
+  background-image: url("../images/catalog/star.svg");
+  background-size: 25px 18px;
+  background-repeat: repeat-x;
+}
+
+.stars-two {
+  width: 42px;
+}
+
+.stars-three {
+  width: 67px;
+}
+
+.stars-four {
+  width: 92px;
+}
+
+
 
 /* загрузить еще */
 
