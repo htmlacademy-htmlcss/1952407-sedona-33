@@ -943,8 +943,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 18px;
-  row-gap: 10px;
-  margin-bottom: 34px;
+  row-gap: 7px;
+  margin-bottom: 30px;
 }
 
 .content-card-text,
@@ -985,7 +985,7 @@ body {
 .content-card-title {
   font-size: 24px;
   line-height: 31px;
-  margin: 16px 0 0 0;
+  margin: 12px 0 0 0;
 }
 
 .content-card-img {
@@ -1111,8 +1111,6 @@ body {
   width: 92px;
 }
 
-
-
 /* загрузить еще */
 
 .button-more-wrapper {
@@ -1184,8 +1182,14 @@ body {
 
 /* подвал каталога */
 
+.mailing-title.catalog {
+  padding-top: 66px;
+  margin-bottom: 46px;
+}
+
 .mailing-no-bg-img {
   background-image: none;
   background-color: #ffffff;
   color: #000000;
+  min-height: 449px;
 }
