@@ -546,6 +546,7 @@ body {
 .button-more-wrapper .button:active,
 .pagination-item .button:active {
   color: rgba(255, 255, 255, 0.3);
+  background: #68A2CA;
 }
 
 .mailing-form .button:focus-visible,
