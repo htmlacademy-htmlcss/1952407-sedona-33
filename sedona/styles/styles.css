@@ -535,16 +535,24 @@ body {
   background-color: #E6E6E6;
 }
 
-.mailing-form .button:hover {
+.mailing-form .button:hover,
+.button-more-wrapper .button:hover,
+.pagination-item .button:hover {
   background-color: #68A2CA;
+  color: #ffffff;
 }
 
-.mailing-form .button:active {
+.mailing-form .button:active,
+.button-more-wrapper .button:active,
+.pagination-item .button:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.mailing-form .button:focus-visible {
+.mailing-form .button:focus-visible,
+.button-more-wrapper .button:focus-visible,
+.pagination-item .button:focus-visible {
   outline: 3px solid #756257;
+  color: #ffffff;
 }
 
 
@@ -727,6 +735,20 @@ body {
   opacity: 0.3;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:focus-visible {
+  outline: 3px solid #83B3D3;
+  border-radius: 2px;
+  outline-offset: 2px;
+}
+
 .breadcrumbs-link {
   color: inherit;
   cursor: pointer;
@@ -788,8 +810,36 @@ body {
   padding: 14px 35px;
 }
 
+.form-filter .button-blue:hover {
+  background: #68A2CA;
+}
+
+.form-filter .button-blue:active {
+  background: #68A2CA;
+  color:rgba(255, 255, 255, 0.3)
+}
+
+.form-filter .button-blue:focus-visible {
+  outline: 3px solid #FFFFFF;
+}
+
 .form-filter .button-transparent {
-  padding: 13px 44px;
+  padding: 12px 20px;
+  margin: 0 auto;
+}
+
+.form-filter .button-transparent:hover {
+  opacity: 0.6;
+}
+
+.form-filter .button-transparent:active {
+  opacity: 0.3;
+}
+
+.form-filter .button-transparent:focus-visible {
+  outline: 3px solid #83B3D3;
+  outline-offset: -10px;
+  border-radius: 12px;
 }
 
 /* сортировка */
@@ -811,6 +861,9 @@ body {
 }
 
 .select-control {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
   width: 287px;
   min-height: 48px;
   padding-left: 19px;
@@ -818,6 +871,16 @@ body {
   margin-right: auto;
   font-size: 18px;
   line-height: 23px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+.select-control:hover,
+.select-control:focus-visible,
+.select-control-hotels:hover,
+.select-control-hotels:focus-visible {
+  border: 2px solid #83B3D3;
+  outline: none;
 }
 
 .button-sorting-wrapper {
@@ -996,6 +1059,7 @@ body {
 .pagination-container {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .pagination {
@@ -1029,10 +1093,18 @@ body {
 }
 
 .select-control-hotels {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
   padding-left: 17px;
   width: 160px;
   min-height: 48px;
   cursor: pointer;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+}
+.pagination-item .button:focus-visible {
+  background: #68A2CA;
 }
 
 /* подвал каталога */
