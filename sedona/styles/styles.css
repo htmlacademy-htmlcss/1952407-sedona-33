@@ -256,11 +256,10 @@ body {
   color: #f2f2f2;
   background-color: #333333;
   background:
-  url("../images/bg-into-devider.svg") no-repeat center bottom /*428px*/,
-  url("../images/index-background.jpg") no-repeat;
-  background-size: 100% auto;
+  url("../images/bg-into-devider.svg") no-repeat center bottom,
+  url("../images/index-background.jpg") top center/cover no-repeat;
   width: 1200px;
-  height: 485px;
+  min-height: 485px;
   margin-bottom: 63px;
 }
 
@@ -419,7 +418,6 @@ body {
   text-align: center;
   width: 1060px;
   margin: 0 auto;
-
 }
 
 .search-hotel-title {
@@ -447,6 +445,20 @@ body {
   margin-bottom: 93px;
 }
 
+.search-hotel .button:hover {
+  background-color: #615048;
+}
+
+.search-hotel .button:active {
+  background-color: #615048;
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.search-hotel .button:focus-visible {
+  background: #615048;
+  outline: 3px solid #83b3d3;
+}
+
 /* подвал */
 /* подписка на рассылку */
 
@@ -454,7 +466,8 @@ body {
   color: #ffffff;
   background-color: #333333;
   background-image: url("../images/background-mailing.jpg");
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
   width: 1200px;
   min-height: 411px;
@@ -485,6 +498,7 @@ body {
 .mailing-form {
   display: flex;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
 .mailing-form .button-blue {
@@ -495,14 +509,44 @@ body {
 }
 
 .mailing-form .field {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 26px;
   background-color: #F2F2F2;
-  border-radius: 10px 0px 0px 10px; /* это я сам написал, в фигме почему то так border-radius: 0px 10px 10px 0px;*/
+  border-radius: 10px 0px 0px 10px;
   color: #000000;
   border: none;
   padding: 17px 0;
   padding-left: 22px;
   width: 578px;
 }
+
+.mailing-form .field:invalid {
+  background-color: #FFFFFF;
+  outline: 2px solid #ff5757;
+}
+
+.mailing-form .field:hover {
+  background-color: #E6E6E6;
+}
+
+.mailing-form .field:focus-visible {
+  outline: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+
+.mailing-form .button:hover {
+  background-color: #68A2CA;
+}
+
+.mailing-form .button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.mailing-form .button:focus-visible {
+  outline: 3px solid #756257;
+}
+
 
 /* контакты */
 
@@ -511,8 +555,9 @@ body {
   color: #000000;
   display: flex;
   justify-content: space-between;
-  padding: 40px 0;
-  padding-bottom: 36.5px;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 26px;
 }
 
 .footer-social {
@@ -551,12 +596,22 @@ body {
 }
 
 .footer-social-button:hover .footer-social-icon {
-  fill: rgba(104, 162, 202, 1);
+  color: #68A2CA;
+}
+
+.footer-social-button:active .footer-social-icon {
+  color: #68A2CA;
+  opacity: 0.3;
+}
+
+.footer-social-button:focus-visible {
+  outline: 3px solid #83B3D3;
+  border-radius: 6px;
 }
 
 .footer-phone {
   text-align: center;
-  margin-left: 10px;
+  margin-right: 12px;
 }
 
 .footer-phone a {
@@ -566,16 +621,56 @@ body {
   text-decoration-line: none;
 }
 
+.footer-logo-link {
+  min-width: 160px;
+  min-height: 70px;
+  position: relative;
+}
+
+.footer-phone a:hover,
+.footer-logo-link:hover .footer-logo-icon {
+  color: #756257;
+}
+
+.footer-phone a:active,
+.footer-logo-link:active .footer-logo-icon {
+  color: #756257;
+  opacity: 0.3;
+}
+
+
+.footer-phone a:focus-visible {
+  outline: 3px solid #83B3D3;
+  border-radius: 6px;
+  padding: 3px 8px 7px;
+  color: #756257;
+}
+
+.footer-logo-link:focus-visible {
+  outline: none;
+  border: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.footer-logo-link:focus-visible .footer-logo-icon {
+  color: #756257;
+}
+
 .footer-logo {
   width: 252px;
-  margin-right: 72px;
+  margin-right: 49px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
 .footer-logo-icon {
-  color: #000000
+  position: absolute;
+  color: #000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* catalog */
