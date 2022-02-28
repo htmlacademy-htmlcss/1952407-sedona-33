@@ -967,6 +967,19 @@ body {
   color: #000000;
   text-decoration-line: none;
   grid-column: 1 / -1;
+  outline: none;
+}
+
+.content-card-link:hover .content-card-img {
+  opacity: 0.6;
+}
+
+.content-card-link:active .content-card-img {
+  opacity: 0.3;
+}
+
+.content-card-link:focus .content-card-img {
+  outline: 3px solid #83B3D3;
 }
 
 .content-card-title {
@@ -1026,6 +1039,47 @@ body {
   grid-column: 3 / 4;
   min-width: 141px;
 }
+
+.inner-content-card .button-brown:hover {
+  background-color: #615048;
+}
+
+.inner-content-card .button-brown:active {
+  background-color: #615048;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.inner-content-card .button-brown:focus-visible {
+  outline: 3px solid #83B3D3;
+  outline-offset: -1px;
+}
+
+.inner-content-card .button-blue:hover {
+  background-color: #68A2CA;
+  outline: 1px solid #756257;
+}
+
+.inner-content-card .button-blue:active {
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+  outline: 1px solid #756257;
+}
+
+.inner-content-card .button-green:hover {
+  background-color: #6C9E42;
+}
+
+.inner-content-card .button-green:active {
+  background-color: #6C9E42;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.inner-content-card .button-green:focus-visible,
+.inner-content-card .button-blue:focus-visible {
+  outline: 3px solid #756257;
+  outline-offset: -1px;
+}
+
 
 .hotel-rating {
   font-size: 16px;
