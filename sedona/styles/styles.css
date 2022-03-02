@@ -60,7 +60,6 @@ body {
   flex-direction: column;
   min-height: 100%;
   flex-grow: 1;
-  z-index: 1;
 }
 
 .main-container {
@@ -119,6 +118,7 @@ body {
 .page-header {
   background: #ffffff;
   color: #000000;
+  z-index: 1;
 }
 
 .navigation {
@@ -247,7 +247,6 @@ body {
 .main-page {
   color: #000000;
   background-color: #ffffff;
-  z-index: -1;
 }
 
 /* intro */
@@ -688,7 +687,6 @@ body {
 .main-inner {
   background-color: #ffffff;
   color: #000000;
-  z-index: -1;
 }
 
 /* поле выбора гостиниц */
