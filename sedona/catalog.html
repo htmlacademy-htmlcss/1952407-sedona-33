@@ -79,16 +79,25 @@
                 <legend class="form-filter-title">Инфраструктура:</legend>
                 <ul class="form-filter-list">
                   <li class="form-filter-item">
-                    <input class="control-input" type="checkbox" name="pool" id="pool" checked>
-                    <label class="control-label" for="pool">Бассейн</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Бассейн</span>
+                    </label>
                   </li>
                   <li class="form-filter-item">
-                    <input class="control-input" type="checkbox" name="parking" id="parking" checked>
-                    <label class="control-label" for="parking">Парковка</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Парковка</span>
+                    </label>
                   </li>
                   <li class="form-filter-item">
-                    <input class="control-input" type="checkbox" name="wifi" id="wifi">
-                    <label class="control-label" for="wifi">Wi-Fi</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="wifi">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Wi-Fi</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -96,16 +105,25 @@
                 <legend class="form-filter-title">Тип жилья:</legend>
                 <ul class="form-filter-list">
                   <li class="form-filter-item">
-                    <input class="control-input" type="radio" name="housing-group" id="hotel" value="hotel" checked>
-                    <label class="control-label" for="hotel">Гостиница</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="radio" name="housing-group" value="hotel" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Гостиница</span>
+                    </label>
                   </li>
                   <li class="form-filter-item">
-                    <input class="control-input" type="radio" name="housing-group" id="motel" value="motel">
-                    <label class="control-label" for="motel">Мотель</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="radio" name="housing-group" value="motel">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Мотель</span>
+                    </label>
                   </li>
                   <li class="form-filter-item">
-                    <input class="control-input" type="radio" name="housing-group" id="apartment" value="apartment">
-                    <label class="control-label" for="apartment">Апартаменты</label>
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="radio" name="housing-group" value="apartment">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Апартаменты</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -146,11 +164,11 @@
         <!-- сортировка -->
         <div class="sorting-wrapper">
           <p class="sorting-result"><b>Найдено гостиниц: 38</b></p>
-          <select class="select-control" aria-label="Сортировка">
-            <option value="cheap">Сначала дешёвое</option>
-            <option value="expensive">Сначала дорогое</option>
-            <option value="popular">Сначала популярное</option>
-          </select>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогое</option>
+              <option value="popular">Сначала популярное</option>
+            </select>
           <div class="button-sorting-wrapper">
             <a class="button-sorting button-sorting-current" href="#">
               <span class="visually-hidden">Показать список</span>

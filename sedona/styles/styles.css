@@ -693,7 +693,8 @@ body {
 .catalog-hotels-wrapper {
   background: #756257 url("../images/catalog/catalog-background-filter.jpg") no-repeat;
   color: #ffffff;
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: top center;
   width: 1200px;
   min-height: 408px;
   padding: 0 71px;
@@ -754,9 +755,11 @@ body {
 
 .form-filter {
   display: flex;
+  padding-bottom: 35px;
 }
 
 .form-filter-group {
+  margin: 0;
   padding: 0;
   border: none;
 }
@@ -779,33 +782,44 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  padding: 0;
 }
 
 .control-label {
   line-height: 23px;
-  display: inline-block;
-  padding-bottom: 13px;
 }
 
 .form-filter-item:first-child .control-label {
-  padding-top: 30px;
+  /* padding-top: 30px; */
+  /* перепроверить. было на лейбеле с текстом  */
 }
 
 .form-filter-item:last-child .control-label {
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
+  /* перепроверить. было на лейбеле с текстом  */
+}
+
+.form-filter-item:first-child {
+  margin-top: 30px;
+}
+
+.form-filter-item:not(:last-child) {
+  margin-bottom: 13px;
 }
 
 .filter-button-wrapper {
-  margin-left: 79px;
+  margin-left: 82px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .form-filter .button-blue {
   font-size: 16px;
   line-height: 21px;
   padding: 14px 35px;
+  margin-top: 60px;
+  margin-bottom: 7px;
 }
 
 .form-filter .button-blue:hover {
@@ -838,6 +852,65 @@ body {
   outline: 3px solid #83B3D3;
   outline-offset: -10px;
   border-radius: 12px;
+}
+
+/* форма с чекбоксами */
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  top: 1px;
+  left: 1px;
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:active .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12.2px;
+  height: 9.9px;
+  content: "";
+  background-image: url("../images/catalog/checkbox.svg");
+  background-repeat: no-repeat;
+}
+
+/* форма с радиокнопками */
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input:focus-visible + .control-mark {
+  outline: 3px solid #83B3D3;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* форма с ценой и ползунком */
@@ -876,7 +949,6 @@ body {
   border-radius: 4px 0px 0px 4px;
   box-sizing: border-box;
   padding: 14px 39px 11px 17px;
-  /* appearance: textfield; */
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -976,16 +1048,19 @@ body {
 .select-control {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 23px;
+  line-height:23px;
   width: 287px;
   min-height: 48px;
-  padding-left: 19px;
+  padding-left: 16px;
+  padding-bottom: 4px;
   cursor: pointer;
   margin-right: auto;
-  font-size: 18px;
-  line-height: 23px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
+  appearance: none;
+  background-image: url("../images/catalog/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
 }
 
 .select-control:hover,
@@ -994,6 +1069,12 @@ body {
 .select-control-hotels:focus-visible {
   border: 2px solid #83B3D3;
   outline: none;
+}
+
+.select-control:active {
+  opacity: 0.3;
+  outline: none;
+  border: 2px solid #E6E6E6;
 }
 
 .button-sorting-wrapper {
@@ -1091,7 +1172,7 @@ body {
   opacity: 0.3;
 }
 
-.content-card-link:focus .content-card-img {
+.content-card-link:focus-visible .content-card-img {
   outline: 3px solid #83B3D3;
 }
 
@@ -1273,7 +1354,7 @@ body {
 
 .hotels-on-page-text {
   margin: 0;
-  margin-right: 51px;
+  margin-right: 52px;
   line-height: 23px;
   color: #333333;
 }
@@ -1282,13 +1363,19 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 23px;
-  padding-left: 17px;
+  padding-left: 14px;
+  padding-bottom: 3px;
   width: 160px;
   min-height: 48px;
   cursor: pointer;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
+  appearance: none;
+  background-image: url("../images/catalog/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
+
 .pagination-item .button:focus-visible {
   background: #68A2CA;
 }
