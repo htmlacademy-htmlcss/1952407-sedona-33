@@ -1071,7 +1071,8 @@ body {
   outline: none;
 }
 
-.select-control:active {
+.select-control:active,
+.select-control-hotels:active {
   opacity: 0.3;
   outline: none;
   border: 2px solid #E6E6E6;
