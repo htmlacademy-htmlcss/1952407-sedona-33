@@ -751,6 +751,7 @@ body {
 .breadcrumbs-link {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .form-filter {
@@ -1052,6 +1053,7 @@ body {
   width: 287px;
   min-height: 48px;
   padding-left: 16px;
+  padding-right: 48px;
   padding-bottom: 4px;
   cursor: pointer;
   margin-right: auto;
@@ -1365,6 +1367,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   padding-left: 14px;
+  padding-right: 48px;
   padding-bottom: 3px;
   width: 160px;
   min-height: 48px;
