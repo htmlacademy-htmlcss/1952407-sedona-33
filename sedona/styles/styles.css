@@ -60,7 +60,6 @@ body {
   flex-direction: column;
   min-height: 100%;
   flex-grow: 1;
-  z-index: 1;
 }
 
 .main-container {
@@ -119,6 +118,7 @@ body {
 .page-header {
   background: #ffffff;
   color: #000000;
+  z-index: 1;
 }
 
 .navigation {
@@ -247,7 +247,6 @@ body {
 .main-page {
   color: #000000;
   background-color: #ffffff;
-  z-index: -1;
 }
 
 /* intro */
@@ -516,8 +515,7 @@ body {
   border-radius: 10px 0px 0px 10px;
   color: #000000;
   border: none;
-  padding: 17px 0;
-  padding-left: 22px;
+  padding: 17px 22px;
   width: 578px;
 }
 
@@ -688,7 +686,6 @@ body {
 .main-inner {
   background-color: #ffffff;
   color: #000000;
-  z-index: -1;
 }
 
 /* поле выбора гостиниц */
@@ -696,7 +693,8 @@ body {
 .catalog-hotels-wrapper {
   background: #756257 url("../images/catalog/catalog-background-filter.jpg") no-repeat;
   color: #ffffff;
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: top center;
   width: 1200px;
   min-height: 408px;
   padding: 0 71px;
@@ -753,13 +751,16 @@ body {
 .breadcrumbs-link {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .form-filter {
   display: flex;
+  padding-bottom: 35px;
 }
 
 .form-filter-group {
+  margin: 0;
   padding: 0;
   border: none;
 }
@@ -782,33 +783,44 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  padding: 0;
 }
 
 .control-label {
   line-height: 23px;
-  display: inline-block;
-  padding-bottom: 13px;
 }
 
 .form-filter-item:first-child .control-label {
-  padding-top: 30px;
+  /* padding-top: 30px; */
+  /* перепроверить. было на лейбеле с текстом  */
 }
 
 .form-filter-item:last-child .control-label {
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
+  /* перепроверить. было на лейбеле с текстом  */
+}
+
+.form-filter-item:first-child {
+  margin-top: 30px;
+}
+
+.form-filter-item:not(:last-child) {
+  margin-bottom: 13px;
 }
 
 .filter-button-wrapper {
-  margin-left: 81px;
+  margin-left: 82px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .form-filter .button-blue {
   font-size: 16px;
   line-height: 21px;
   padding: 14px 35px;
+  margin-top: 60px;
+  margin-bottom: 7px;
 }
 
 .form-filter .button-blue:hover {
@@ -843,6 +855,179 @@ body {
   border-radius: 12px;
 }
 
+/* форма с чекбоксами */
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  top: 1px;
+  left: 1px;
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control:active .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12.2px;
+  height: 9.9px;
+  content: "";
+  background-image: url("../images/catalog/checkbox.svg");
+  background-repeat: no-repeat;
+}
+
+/* форма с радиокнопками */
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input:focus-visible + .control-mark {
+  outline: 3px solid #83B3D3;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* форма с ценой и ползунком */
+
+.range {
+  width: 287px;
+  margin-top: 34px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+}
+
+.range-input-min-price,
+.range-input-max-price {
+  position: relative;
+}
+
+.range-input-min-text,
+.range-input-max-text {
+  color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 16px;
+  top: 12px;
+}
+
+.range-input {
+  font: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px 0px 0px 4px;
+  box-sizing: border-box;
+  padding: 14px 39px 11px 17px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-input-min {
+  border-right: 1px solid #FFFFFF;;
+}
+
+.range-input-max {
+  border-radius: 0px 4px 4px 0px;
+  border-left: 1px solid #FFFFFF;;
+}
+
+.range-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:active {
+  background-color: #756257;
+  outline: none;
+  border-color: rgb(255, 255, 255)
+}
+
+.range-input:focus-visible {
+  outline-color: #81B3D2;
+  box-shadow: 0px 0px 0px 3px #81b3d2;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-top: 29px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -9px;
+}
+
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.range-toggle:focus-visible {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 /* сортировка */
 
 .sorting-wrapper {
@@ -864,16 +1049,20 @@ body {
 .select-control {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 23px;
+  line-height:23px;
   width: 287px;
   min-height: 48px;
-  padding-left: 19px;
+  padding-left: 16px;
+  padding-right: 48px;
+  padding-bottom: 4px;
   cursor: pointer;
   margin-right: auto;
-  font-size: 18px;
-  line-height: 23px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
+  appearance: none;
+  background-image: url("../images/catalog/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
 }
 
 .select-control:hover,
@@ -882,6 +1071,13 @@ body {
 .select-control-hotels:focus-visible {
   border: 2px solid #83B3D3;
   outline: none;
+}
+
+.select-control:active,
+.select-control-hotels:active {
+  opacity: 0.3;
+  outline: none;
+  border: 2px solid #E6E6E6;
 }
 
 .button-sorting-wrapper {
@@ -979,7 +1175,7 @@ body {
   opacity: 0.3;
 }
 
-.content-card-link:focus .content-card-img {
+.content-card-link:focus-visible .content-card-img {
   outline: 3px solid #83B3D3;
 }
 
@@ -1161,7 +1357,7 @@ body {
 
 .hotels-on-page-text {
   margin: 0;
-  margin-right: 51px;
+  margin-right: 52px;
   line-height: 23px;
   color: #333333;
 }
@@ -1170,13 +1366,20 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 23px;
-  padding-left: 17px;
+  padding-left: 14px;
+  padding-right: 48px;
+  padding-bottom: 3px;
   width: 160px;
   min-height: 48px;
   cursor: pointer;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
+  appearance: none;
+  background-image: url("../images/catalog/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
+
 .pagination-item .button:focus-visible {
   background: #68A2CA;
 }
@@ -1193,4 +1396,380 @@ body {
   background-color: #ffffff;
   color: #000000;
   min-height: 449px;
+}
+
+/* модальное окно */
+
+.modal-container {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 50px 70px 70px 70px;
+  background-color: #ffffff;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-search-hotels {
+  width: 715px;
+  box-sizing: border-box;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.modal-close-button {
+  width: 53px;
+  height: 53px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.modal-close-button svg {
+  margin: auto;
+  transform: translateY(15%);
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active svg {
+  opacity: 0.6;
+}
+
+.modal-close-button:focus-visible {
+  outline: 3px solid #83B3D3;
+  background-color: #e6e6e6;
+}
+
+.modal-title {
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0;
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-bottom: 32px;
+  max-width: 490px;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: 151px auto 1fr auto;
+  row-gap: 26px;
+  column-gap: 4px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.modal-input-wrapper {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.modal-adult-wrapper {
+  grid-column: 2 / 3;
+  position: relative;
+}
+
+.children-label {
+  grid-column: 3 / 4;
+  justify-self: flex-end;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.modal-children-wrapper {
+  grid-column: 4 / 5;
+  position: relative;
+}
+
+.modal-input {
+  appearance: none;
+  width: 420px;
+  height: 50px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  padding-left: 19px;
+  margin-bottom: 13px;
+  box-sizing: border-box;
+}
+
+.modal-input-arrival-date:hover,
+.modal-input-departure-date:hover,
+.number-of-adults:hover,
+.number-of-children:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-input-arrival-date:focus-visible,
+.modal-input-departure-date:focus-visible,
+.number-of-adults:focus-visible,
+.number-of-children:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-input-arrival-date:active,
+.modal-input-departure-date:active,
+.number-of-children:active,
+.number-of-adults:active {
+  outline: 2px solid #000000;
+  background-color: #ffffff;
+}
+
+.modal-label {
+  align-self: flex-start;
+  margin-top: 14px;
+}
+
+.input-calendar-arrival,
+.input-calendar-departure {
+  width: 15px;
+  height: 15px;
+  background: url("../images/modal/calendar.svg") no-repeat center;
+  border: none;
+  position: absolute;
+  right: 19px;
+  top: 17px;
+}
+
+.input-calendar-arrival:focus-visible,
+.input-calendar-departure:focus-visible {
+  outline: 3px solid #83b3d3;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+.modal-notification-error {
+  font-size: 16px;
+  line-height: 40px;
+  color: #FF5757;
+  font-weight: 400;
+  display: none;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.modal-notification-error-active {
+  display: block;
+}
+
+.modal-notification-dates-available {
+  font-size: 16px;
+  line-height:40px;
+  color: #333333;
+  font-weight: 400;
+  display: none;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.modal-notification-dates-available-active {
+  display: block;
+}
+
+.number-of-adults,
+.number-of-children {
+  width: 130px;
+  height: 50px;
+  border: none;
+  background: #f2f2f2;
+  text-align: center;
+  border-radius: 4px;
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.number-of-adults[type="number"],
+.number-of-children[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.number-of-adults[type="number"]::-webkit-inner-spin-button,
+.number-of-children[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.minus-button {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  border: none;
+  background: transparent;
+}
+
+.minus-button svg {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.3;
+}
+
+.minus-button:hover svg {
+  opacity: 1;
+}
+
+.minus-button:focus-visible {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+  outline-offset: 0;
+  border-radius: 4px;
+}
+
+.minus-button:active svg {
+  opacity: 0.2;
+}
+
+.plus-button {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  border: none;
+  background: transparent;
+}
+
+.plus-button svg {
+  opacity: 0.3;
+}
+
+.plus-button:hover svg {
+  opacity: 1;
+}
+
+.plus-button:active svg {
+  opacity: 0.2;
+}
+
+.plus-button:focus-visible {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.modal-button-search {
+  grid-column: 1 / -1;
+  padding: 10px 10px;
+  width: 575px;
+  background-color: #83b3d3;
+  border-radius: 10px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 13px;
+}
+
+.modal-button-search:hover {
+  background-color: #68a2ca;
+}
+
+.modal-button-search:focus-visible {
+  background-color: #68a2ca;
+  outline: 3px solid #756257;
+}
+
+.modal-button-search:active {
+  background-color: #68a2ca;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* tooltip */
+
+.tooltip-toggle {
+  display: inline-block;
+  position: relative;
+  border: none;
+  background-color: #83B3D3;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  margin-right: -1px;
+  text-align: left;
+}
+
+.tooltip-icon {
+  display: block;
+  margin: auto;
+  color: #ffffff;
+}
+
+.tooltip-toggle:hover {
+  background-color: #68A2CA;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 20px 18px 23px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  position: absolute;
+  margin-top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+  box-sizing: border-box;
+  letter-spacing: -0.5px;
+}
+
+.tooltip-text:after {
+  content:"";
+  background-image: url("../images/modal/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover .tooltip-text,
+.tooltip-toggle:focus .tooltip-text {
+  display: block;
 }
