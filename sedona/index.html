@@ -204,14 +204,16 @@
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="modal-label" for="arrival">Дата заезда:</label>
             <div class="modal-input-wrapper">
-              <input class="modal-input modal-input-arrival-date" type="text" name="arrival-date" id="arrival" placeholder="Укажите дату заезда">
+              <input class="modal-input modal-input-arrival-date" type="text" name="arrival-date" id="arrival" placeholder="Укажите дату заезда" required>
               <button class="modal-button input-calendar-arrival" aria-label="Открыть календарь для выбора даты." type="button"></button>
+              <!-- для отображения добавить класс modal-notification-dates-available-active -->
               <span class="modal-notification-error">Мы не можем отправить вас в прошлое.</span>
             </div>
             <label class="modal-label" for="departure">Дата выезда:</label>
             <div class="modal-input-wrapper">
-              <input class="modal-input modal-input-departure-date" type="text" name="date-of-departure" id="departure" placeholder="Укажите дату выезда">
+              <input class="modal-input modal-input-departure-date" type="text" name="date-of-departure" id="departure" placeholder="Укажите дату выезда" required>
               <button class="modal-button input-calendar-departure" aria-label="Открыть календарь для выбора даты." type="button"></button>
+              <!-- для отображения добавить класс modal-notification-error-active -->
               <span class="modal-notification-dates-available">На эти даты есть свободные номера. Пока есть.</span>
             </div>
             <label class="adults-label" for="adults">Взрослые:</label>
