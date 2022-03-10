@@ -134,12 +134,12 @@
                   <div class="range-wrapper-inputs">
                     <div class="range-input-min-price">
                       <label class="visually-hidden" for="min-price">Укажите минимальную цену</label>
-                      <input class="range-input range-input-min" type="number" value="0" name="min-price" id="min-price">
+                      <input class="range-input range-input-min" type="number" value="0" name="min-price" id="min-price" required>
                       <span class="range-input-min-text">от</span>
                     </div>
                     <div class="range-input-max-price">
                       <label class="visually-hidden" for="max-price">Укажите максимальную цену</label>
-                      <input class="range-input range-input-max" type="number" value="9000" name="max-price" id="max-price">
+                      <input class="range-input range-input-max" type="number" value="9000" name="max-price" id="max-price" required>
                       <span class="range-input-max-text">до</span>
                     </div>
                   </div>
@@ -287,7 +287,7 @@
             <p class="mailing-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
             <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="mailing-email">Email</label>
-              <input class="field" type="email" name="mailing-email" id="mailing-email" placeholder="Ваш e-mail">
+              <input class="field" type="email" name="mailing-email" id="mailing-email" placeholder="Ваш e-mail" required>
               <button class="mailing-button button button-blue" type="submit">
                 <span class="mailing-button-description">Подписаться</span>
               </button>

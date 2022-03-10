@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Седона</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" type="images/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -139,7 +140,7 @@
             <p class="mailing-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
             <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="mailing-email">Email</label>
-              <input class="field" type="email" name="mailing-email" id="mailing-email" placeholder="Ваш e-mail">
+              <input class="field" type="email" name="mailing-email" id="mailing-email" placeholder="Ваш e-mail" required>
               <button class="button button-blue" type="submit">
                 <span class="mailing-button-description">Подписаться</span>
               </button>
@@ -224,7 +225,7 @@
                   <path d="M0 0L0 1L13 1V0L0 0Z" fill="currentColor"></path>
                 </svg>
               </button>
-              <input class="number-of-adults" type="number" name="number-of-adults" id="adults" value="2" step="1" min="0" max="12">
+              <input class="number-of-adults" type="number" name="number-of-adults" id="adults" value="2" step="1" min="0" max="12" required>
               <button class="plus-button" type="button" aria-label="Увеличить количество взрослых.">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <g><path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="currentColor"></path></g>
@@ -246,7 +247,7 @@
                   <path d="M0 0L0 1L13 1V0L0 0Z" fill="currentColor"></path>
                 </svg>
               </button>
-              <input class="number-of-children" type="number" name="number-of-children" value="1" step="1" min="0" max="12">
+              <input class="number-of-children" type="number" name="number-of-children" value="1" step="1" min="0" max="12" required>
               <button class="plus-button" type="button" aria-label="Увеличить количество детей.">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <g><path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="currentColor"></path></g>
